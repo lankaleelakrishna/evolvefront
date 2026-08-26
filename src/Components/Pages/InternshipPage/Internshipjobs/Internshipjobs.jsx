@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./Internshipjobs.css";
 
 import { useNavigate } from "react-router-dom";
@@ -26,7 +27,7 @@ const Internshipjobs = ({ searchTerm = "" }) => {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/aftergrad/internships"
+                `${API_BASE_URL}/api/aftergrad/internships`
             );
 
             const data = await response.json();
@@ -44,7 +45,7 @@ const Internshipjobs = ({ searchTerm = "" }) => {
                     try {
 
                         const companyResponse = await fetch(
-                            `http://localhost:8080/api/company-profile/user/${job.userId}`
+                            `${API_BASE_URL}/api/company-profile/user/${job.userId}`
                         );
 
                         const company = await companyResponse.json();
@@ -134,7 +135,7 @@ const Internshipjobs = ({ searchTerm = "" }) => {
 
                             const logoUrl =
                                 companyId
-                                    ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                                    ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                                     : "https://via.placeholder.com/80";
 
                             return (

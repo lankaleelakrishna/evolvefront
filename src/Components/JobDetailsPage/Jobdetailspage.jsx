@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./JobDetailsPage.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -36,7 +37,7 @@ const JobDetailsPage = () => {
   const fetchJobDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/aftergrad/${id}`
+        `${API_BASE_URL}/api/aftergrad/${id}`
       );
 
       const data = response.data;
@@ -73,7 +74,7 @@ const JobDetailsPage = () => {
   const fetchCompanyLogo = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/company-profile/user/${userId}`
+        `${API_BASE_URL}/api/company-profile/user/${userId}`
       );
 
       setCompanyId(response.data.id);
@@ -117,7 +118,7 @@ const JobDetailsPage = () => {
       const userId = localStorage.getItem("userId");
 
       await axios.post(
-        "http://localhost:8080/api/saved-jobs",
+        `${API_BASE_URL}/api/saved-jobs`,
         {
           userId: userId,
           jobId: job.id,
@@ -253,7 +254,7 @@ const JobDetailsPage = () => {
   }
 
   const logoUrl = companyId
-    ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+    ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
     : "https://via.placeholder.com/80";
 
   return (

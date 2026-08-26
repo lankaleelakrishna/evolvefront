@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./SearchBar.css";
 import { IoMdSearch } from "react-icons/io";
 
@@ -19,7 +20,7 @@ const SearchBar = ({ jobsData = [], jobs = [], onSearch, onSearchSubmit }) => {
 
   const fetchLocations = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/locations/all");
+      const response = await fetch(`${API_BASE_URL}/api/locations/all`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch locations");

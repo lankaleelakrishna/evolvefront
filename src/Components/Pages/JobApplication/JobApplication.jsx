@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../../config/api";
 import "./JobApplication.css";
 
 export default function JobApplication() {
@@ -155,7 +156,7 @@ export default function JobApplication() {
                 jobId: selectedJob?.id,
             });
 
-            const response = await fetch("http://localhost:8080/application/apply", {
+            const response = await fetch(`${API_BASE_URL}/application/apply`, {
                 method: "POST",
                 headers: {
                     Authorization: "Bearer " + token,

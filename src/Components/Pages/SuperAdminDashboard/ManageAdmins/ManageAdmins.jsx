@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../../../../config/api";
 import React, {
   useMemo,
   useState,
@@ -48,7 +49,7 @@ const ManageAdmins = () => {
   const fetchAdmins = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/admins/all",
+        `${API_BASE_URL}/api/admins/all`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -121,7 +122,7 @@ const ManageAdmins = () => {
     try {
       if (editingAdmin) {
         await axios.put(
-          `http://localhost:8080/api/admins/${editingAdmin}`,
+          `${API_BASE_URL}/api/admins/${editingAdmin}`,
           {
             fullName:
               formData.name,
@@ -140,7 +141,7 @@ const ManageAdmins = () => {
         );
       } else {
         await axios.post(
-          "http://localhost:8080/api/admins/add",
+          `${API_BASE_URL}/api/admins/add`,
           {
             fullName:
               formData.name,
@@ -181,7 +182,7 @@ const ManageAdmins = () => {
 
     try {
       await axios.delete(
-        `http://localhost:8080/api/admins/${id}`,
+        `${API_BASE_URL}/api/admins/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -208,7 +209,7 @@ const ManageAdmins = () => {
           : "ACTIVE";
 
       await axios.put(
-        `http://localhost:8080/api/admins/status/${admin.id}?status=${newStatus}`,
+        `${API_BASE_URL}/api/admins/status/${admin.id}?status=${newStatus}`,
         {},
         {
           headers: {

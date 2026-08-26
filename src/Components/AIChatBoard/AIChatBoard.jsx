@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./AIChatBoard.css";
 import { X, Send, Bot, Sparkles, Mail, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -63,7 +64,7 @@ const AIChatBoard = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/api/ai-chat/ask", {
+      const response = await fetch(`${API_BASE_URL}/api/ai-chat/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

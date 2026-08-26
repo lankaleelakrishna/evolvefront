@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../../../config/api";
 import "./AdminManageCourses.css";
 
 const AdminManageCourses = () => {
@@ -24,7 +25,7 @@ const AdminManageCourses = () => {
 
     const fetchCourses = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/api/courses/all");
+            const res = await axios.get(`${API_BASE_URL}/api/courses/all`);
             setCourses(res.data || []);
         } catch (error) {
             console.error("Fetch courses error:", error);
@@ -60,12 +61,12 @@ const AdminManageCourses = () => {
         try {
             if (editingId) {
                 await axios.put(
-                    `http://localhost:8080/api/courses/update/${editingId}`,
+                    `${API_BASE_URL}/api/courses/update/${editingId}`,
                     formData
                 );
             } else {
                 await axios.post(
-                    "http://localhost:8080/api/courses/add",
+                    `${API_BASE_URL}/api/courses/add`,
                     formData
                 );
             }
@@ -106,7 +107,7 @@ const AdminManageCourses = () => {
         if (!confirmDelete) return;
 
         try {
-            await axios.delete(`http://localhost:8080/api/courses/delete/${id}`);
+            await axios.delete(`${API_BASE_URL}/api/courses/delete/${id}`);
             fetchCourses();
         } catch (error) {
             console.error("Delete course error:", error);

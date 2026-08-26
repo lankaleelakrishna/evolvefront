@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./ResetPassword.css";
 import {
     HiOutlineArrowLeft,
@@ -54,7 +55,7 @@ const ResetPassword = () => {
         try {
             setLoading(true);
 
-            const response = await fetch("http://localhost:8080/api/aftergrad/reset-password", {
+            const response = await fetch(`${API_BASE_URL}/api/aftergrad/reset-password`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

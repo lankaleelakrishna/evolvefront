@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./ContactUs.css";
 import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -89,7 +90,7 @@ const ContactUs = () => {
 
         try {
             await axios.post(
-                "http://localhost:8080/api/contact/details",
+                `${API_BASE_URL}/api/contact/details`,
                 formData
             );
 

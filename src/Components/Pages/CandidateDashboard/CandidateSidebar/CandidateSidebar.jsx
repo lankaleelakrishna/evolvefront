@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import {
   FaUser,
   FaSearch,
@@ -20,7 +21,7 @@ const CandidateSidebar = ({ activeMenu, onChangeMenu }) => {
 
     if (email) {
       setProfilePhoto(
-        `http://localhost:8080/api/profile/photo/${encodeURIComponent(
+        `${API_BASE_URL}/api/profile/photo/${encodeURIComponent(
           email
         )}?t=${Date.now()}`
       );

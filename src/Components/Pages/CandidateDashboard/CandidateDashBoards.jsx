@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import {
   FaBell,
   FaRegCalendarAlt,
@@ -98,7 +99,7 @@ const CandidateDashboard = () => {
 
     if (!userId || userId === "undefined") return;
 
-    fetch(`http://localhost:8080/api/saved-jobs/${userId}`, {
+    fetch(`${API_BASE_URL}/api/saved-jobs/${userId}`, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -117,7 +118,7 @@ const CandidateDashboard = () => {
 
     if (!userId || userId === "undefined") return;
 
-    fetch(`http://localhost:8080/application/user/${userId}`, {
+    fetch(`${API_BASE_URL}/application/user/${userId}`, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -195,7 +196,7 @@ const CandidateDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/resume/download/${fileName}`,
+        `${API_BASE_URL}/api/resume/download/${fileName}`,
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -261,7 +262,7 @@ const CandidateDashboard = () => {
       formData.append("resumeType", selectedResumeType);
       formData.append("templateName", `${selectedResumeType}-template`);
 
-      const response = await fetch("http://localhost:8080/api/resume/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/resume/upload`, {
         method: "POST",
         headers: {
           Authorization: "Bearer " + token,
@@ -297,7 +298,7 @@ const CandidateDashboard = () => {
       return;
     }
 
-    fetch(`http://localhost:8080/api/dashboard/counts/${userId}`, {
+    fetch(`${API_BASE_URL}/api/dashboard/counts/${userId}`, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -334,7 +335,7 @@ const CandidateDashboard = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch("http://localhost:8080/application/apply", {
+      await fetch(`${API_BASE_URL}/application/apply`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

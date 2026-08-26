@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../../HomePage/NavBar/NavBar";
 import Footer from "../../Footer/Footer";
+import { API_BASE_URL } from "../../../config/api";
 import "./CoursePayment.css";
 
 const CoursePayment = () => {
@@ -52,14 +53,14 @@ const CoursePayment = () => {
         try {
             setLoading(true);
 
-            const coursesRes = await axios.get("http://localhost:8080/api/courses/all");
+            const coursesRes = await axios.get(`${API_BASE_URL}/api/courses/all`);
 
             const selectedCourse = (coursesRes.data || []).find(
                 (item) => Number(item.id) === Number(courseId)
             );
 
             const appRes = await axios.get(
-                "http://localhost:8080/api/courseapp/all",
+                `${API_BASE_URL}/api/courseapp/all`,
                 getAuthHeaders()
             );
 
@@ -134,7 +135,7 @@ const CoursePayment = () => {
             }
 
             const orderRes = await axios.post(
-                "http://localhost:8080/api/payments/create-order",
+                `${API_BASE_URL}/api/payments/create-order`,
                 {
                     applicationId: application.id,
                     amount: Number(selectedAmount),
@@ -155,7 +156,7 @@ const CoursePayment = () => {
                 handler: async function (response) {
                     try {
                         await axios.post(
-                            "http://localhost:8080/api/payments/verify",
+                            `${API_BASE_URL}/api/payments/verify`,
                             {
                                 applicationId: application.id,
                                 razorpayOrderId: response.razorpay_order_id,

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import {
     FaSearch,
     FaMapMarkerAlt,
@@ -33,7 +34,7 @@ const CandidateJobs = ({
 
     const fetchJobs = async () => {
         try {
-            const res = await fetch("http://localhost:8080/api/aftergrad/all");
+            const res = await fetch(`${API_BASE_URL}/api/aftergrad/all`);
             const data = await res.json();
 
             const mappedJobs = data.map((job) => ({
@@ -63,7 +64,7 @@ const CandidateJobs = ({
     const fetchCompanyLogo = async (userId) => {
         try {
             const res = await fetch(
-                `http://localhost:8080/api/company-profile/user/${userId}`
+                `${API_BASE_URL}/api/company-profile/user/${userId}`
             );
 
             if (!res.ok) return;
@@ -133,7 +134,7 @@ const CandidateJobs = ({
                 return;
             }
 
-            const response = await fetch("http://localhost:8080/api/saved-jobs", {
+            const response = await fetch(`${API_BASE_URL}/api/saved-jobs`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -253,7 +254,7 @@ const CandidateJobs = ({
                         const companyId = companyMap[job.userId];
 
                         const logoUrl = companyId
-                            ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                            ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                             : "https://via.placeholder.com/50";
 
                         const isSaved = savedJobs.some(

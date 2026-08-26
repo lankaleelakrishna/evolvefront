@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import {
   FaTrashAlt,
   FaUserSlash,
@@ -24,8 +25,8 @@ const AdminManageUsers = ({
 
       const apiUrl =
         type === "excel"
-          ? "http://localhost:8080/api/profile/download-excel"
-          : "http://localhost:8080/api/profile/download-pdf";
+          ? `${API_BASE_URL}/api/profile/download-excel`
+          : `${API_BASE_URL}/api/profile/download-pdf`;
 
       const fileName =
         type === "excel"

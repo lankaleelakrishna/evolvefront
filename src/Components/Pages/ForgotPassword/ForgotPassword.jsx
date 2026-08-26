@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./ForgotPassword.css";
 import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -35,7 +36,7 @@ const ForgotPassword = () => {
         try {
             setLoading(true);
 
-            const response = await fetch("http://localhost:8080/api/aftergrad/send-otp", {
+            const response = await fetch(`${API_BASE_URL}/api/aftergrad/send-otp`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -77,7 +78,7 @@ const ForgotPassword = () => {
         try {
             setLoading(true);
 
-            const response = await fetch("http://localhost:8080/api/aftergrad/verify-otp", {
+            const response = await fetch(`${API_BASE_URL}/api/aftergrad/verify-otp`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

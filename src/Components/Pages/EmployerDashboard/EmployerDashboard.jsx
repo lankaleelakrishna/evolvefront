@@ -1,4 +1,5 @@
 import React, { useMemo, useState , useEffect } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./EmployerDashboard.css";
 
 import EmployeeSidebar from "./EmployeeSidebar/EmployeeSidebar";
@@ -35,7 +36,7 @@ const fetchApplicants = async () => {
         console.log("Company:", company); 
 
         const res = await axios.get(
-            `http://localhost:8080/application/applicants/company/${company}`
+            `${API_BASE_URL}/application/applicants/company/${company}`
         );
 
         console.log("API RESPONSE:", res.data); 
@@ -52,12 +53,12 @@ useEffect(() => {
     const fetchData = async () => {
         try {
             const companyRes = await axios.get(
-                `http://localhost:8080/api/company-profile/user/${userId}`
+                `${API_BASE_URL}/api/company-profile/user/${userId}`
             );
             setCompanyProfile(companyRes.data || {});
             localStorage.setItem("companyName", companyRes.data.companyName);
             const jobsRes = await axios.get(
-                `http://localhost:8080/api/aftergrad/user/${userId}`
+                `${API_BASE_URL}/api/aftergrad/user/${userId}`
             );
             setJobs(jobsRes.data);
 
@@ -95,7 +96,7 @@ const handleSaveCompanyProfile = async (e) => {
 
     try {
         await axios.put(
-            `http://localhost:8080/api/company-profile/${companyProfile.id}`,
+            `${API_BASE_URL}/api/company-profile/${companyProfile.id}`,
             companyProfile,
             {
                 headers: {
@@ -119,7 +120,7 @@ const handleEditJob = (job) => {
 const handleDeleteJob = async (id) => {
     try {
         await axios.delete(
-            `http://localhost:8080/api/aftergrad/delete/${id}/${userId}`
+            `${API_BASE_URL}/api/aftergrad/delete/${id}/${userId}`
         );
 
         setJobs((prevJobs) => prevJobs.filter((job) => job.id !== id));
@@ -130,7 +131,7 @@ const handleDeleteJob = async (id) => {
 
 const handleToggleJobStatus = async (id) => {
     try {
-        await axios.put(`http://localhost:8080/api/jobs/toggle/${id}`);
+        await axios.put(`${API_BASE_URL}/api/jobs/toggle/${id}`);
 
         setJobs((prevJobs) =>
             prevJobs.map((job) =>

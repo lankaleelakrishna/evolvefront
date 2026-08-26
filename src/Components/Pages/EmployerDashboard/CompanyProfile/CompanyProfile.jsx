@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaSave } from "react-icons/fa";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CompanyProfile.css";
 import axios from "axios";
 
@@ -23,7 +24,7 @@ const CompanyProfile = () => {
         const fetchProfile = async () => {
             try {
                 const res = await axios.get(
-                    `http://localhost:8080/api/company-profile/user/${userId}`
+                    `${API_BASE_URL}/api/company-profile/user/${userId}`
                 );
 
                 if (res.data) {
@@ -283,12 +284,12 @@ const CompanyProfile = () => {
 
             if (profile.id) {
                 await axios.put(
-                    `http://localhost:8080/api/company-profile/${profile.id}`,
+                    `${API_BASE_URL}/api/company-profile/${profile.id}`,
                     formData
                 );
             } else {
                 await axios.post(
-                    "http://localhost:8080/api/company-profile",
+                    `${API_BASE_URL}/api/company-profile`,
                     formData
                 );
             }

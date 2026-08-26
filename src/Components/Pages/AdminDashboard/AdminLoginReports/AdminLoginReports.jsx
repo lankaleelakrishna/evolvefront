@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaDownload, FaFileExcel, FaFilePdf, FaChevronDown } from "react-icons/fa";
+import { API_BASE_URL } from "../../../../config/api";
 import "./AdminLoginReports.css";
 
 const AdminLoginReports = () => {
@@ -26,7 +27,7 @@ const AdminLoginReports = () => {
             setLoading(true);
 
             const res = await axios.get(
-                `http://localhost:8080/api/login-logs/by-date?date=${selectedDate}`,
+                `${API_BASE_URL}/api/login-logs/by-date?date=${selectedDate}`,
                 getAuthHeaders()
             );
 
@@ -50,8 +51,8 @@ const AdminLoginReports = () => {
 
             const url =
                 type === "excel"
-                    ? `http://localhost:8080/api/login-logs/excel?date=${selectedDate}`
-                    : `http://localhost:8080/api/login-logs/pdf?date=${selectedDate}`;
+                    ? `${API_BASE_URL}/api/login-logs/excel?date=${selectedDate}`
+                    : `${API_BASE_URL}/api/login-logs/pdf?date=${selectedDate}`;
 
             const fileName =
                 type === "excel"

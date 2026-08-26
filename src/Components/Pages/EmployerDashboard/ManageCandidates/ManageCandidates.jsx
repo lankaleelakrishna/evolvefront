@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./ManageCandidates.css";
 import Logo from "../../../../assets/Logo2.png";
 
@@ -33,7 +34,7 @@ function ManageCandidates() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/candidates");
+                const response = await axios.get(`${API_BASE_URL}/api/candidates`);
                 const dataWithImages = response.data.map((user, index) => ({
                     ...user,
                     avatar:

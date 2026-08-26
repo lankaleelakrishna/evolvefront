@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./Internpage.css";
 
 import {
@@ -26,7 +27,7 @@ const Internpage = () => {
   const fetchInternships = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/aftergrad/internships"
+        `${API_BASE_URL}/api/aftergrad/internships`
       );
 
       const data = await response.json();
@@ -39,7 +40,7 @@ const Internpage = () => {
         data.map(async (job) => {
           try {
             const companyResponse = await fetch(
-              `http://localhost:8080/api/company-profile/user/${job.userId}`
+              `${API_BASE_URL}/api/company-profile/user/${job.userId}`
             );
 
             const company =
@@ -104,7 +105,7 @@ const Internpage = () => {
                 companyMap[job.userId];
 
               const logoUrl = companyId
-                ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                 : "https://via.placeholder.com/100";
 
               return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../../config/api";
 import "./ContactSales.css";
 import NavBar from "../../HomePage/NavBar/NavBar";
 import Footer from "../../Footer/Footer";
@@ -177,7 +178,7 @@ const ContactSales = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:8080/api/hiring-plan/add",
+                `${API_BASE_URL}/api/hiring-plan/add`,
                 finalData,
                 {
                     headers: {

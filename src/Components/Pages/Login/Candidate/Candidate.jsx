@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./Candidate.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -66,7 +67,7 @@ const Candidatelogin = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/auth/login", {
+            const response = await fetch(`${API_BASE_URL}/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -203,7 +204,7 @@ const Candidatelogin = () => {
      *
      *     try {
      *         const response = await fetch(
-     *             `http://localhost:8080/auth/verify-login-otp?emailOrMobile=${formData.username}&otp=${otp}`,
+     *             `${API_BASE_URL}/auth/verify-login-otp?emailOrMobile=${formData.username}&otp=${otp}`,
      *             {
      *                 method: "POST",
      *             }

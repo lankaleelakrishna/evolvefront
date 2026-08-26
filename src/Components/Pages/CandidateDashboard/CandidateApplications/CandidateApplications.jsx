@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CandidateApplications.css";
  
 const CandidateApplications = ({ applications = [] }) => {
@@ -11,7 +12,7 @@ const CandidateApplications = ({ applications = [] }) => {
  
         if (!email) return;
  
-        fetch(`http://localhost:8080/application/status/${email}`, {
+        fetch(`${API_BASE_URL}/application/status/${email}`, {
             headers: {
                 Authorization: "Bearer " + token
             }

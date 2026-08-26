@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./MockInterview.css";
 import { useParams, useNavigate } from "react-router-dom";
 import {
@@ -109,7 +110,7 @@ const MockInterview = () => {
             setLoadingJob(true);
             setJobError("");
 
-            const response = await fetch(`http://localhost:8080/api/aftergrad/${id}`);
+            const response = await fetch(`${API_BASE_URL}/api/aftergrad/${id}`);
 
             if (!response.ok) throw new Error("Failed to fetch job details");
 
@@ -143,7 +144,7 @@ const MockInterview = () => {
     const fetchQuestions = async (jobId) => {
         try {
             const response = await fetch(
-                `http://localhost:8080/api/questions/job/${jobId}`,
+                `${API_BASE_URL}/api/questions/job/${jobId}`,
                 {
                     method: "GET",
                     headers: {
@@ -186,7 +187,7 @@ const MockInterview = () => {
             }
 
             const response = await fetch(
-                `http://localhost:8080/api/interview-session/start?candidateId=${candidateId}&jobId=${job.id}`,
+                `${API_BASE_URL}/api/interview-session/start?candidateId=${candidateId}&jobId=${job.id}`,
                 {
                     method: "POST",
                     headers: {
@@ -581,7 +582,7 @@ const MockInterview = () => {
                 `answer-question-${currentQuestion.id}.webm`
             );
 
-            const response = await fetch(`http://localhost:8080/api/answers/submit`, {
+            const response = await fetch(`${API_BASE_URL}/api/answers/submit`, {
                 method: "POST",
                 headers: {
                     ...getAuthHeaders(),
@@ -632,7 +633,7 @@ const MockInterview = () => {
             const feedback = "Interview completed successfully.";
 
             await fetch(
-                `http://localhost:8080/api/interview-session/complete/${session.id}?totalScore=${totalScore}&feedback=${encodeURIComponent(
+                `${API_BASE_URL}/api/interview-session/complete/${session.id}?totalScore=${totalScore}&feedback=${encodeURIComponent(
                     feedback
                 )}`,
                 {
@@ -666,7 +667,7 @@ const MockInterview = () => {
                 "Practice with more job-specific questions."
             );
 
-            await fetch(`http://localhost:8080/api/results/save`, {
+            await fetch(`${API_BASE_URL}/api/results/save`, {
                 method: "POST",
                 headers: {
                     ...getAuthHeaders(),

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./VendorManagement.css";
 import { toast } from "react-toastify";
 
@@ -44,7 +45,7 @@ const VendorManagement = () => {
 
   const fetchVendors = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/vendors/all", {
+      const response = await fetch(`${API_BASE_URL}/api/vendors/all`, {
         headers: getAuthHeaders(),
       });
 
@@ -58,7 +59,7 @@ const VendorManagement = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/aftergrad/all", {
+      const response = await fetch(`${API_BASE_URL}/api/aftergrad/all`, {
         headers: getAuthHeaders(),
       });
 
@@ -88,7 +89,7 @@ const VendorManagement = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/vendors/add", {
+      const response = await fetch(`${API_BASE_URL}/api/vendors/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -169,7 +170,7 @@ const VendorManagement = () => {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/vendor-jobs/assign?${params.toString()}`,
+        `${API_BASE_URL}/api/vendor-jobs/assign?${params.toString()}`,
         {
           method: "POST",
           headers: getAuthHeaders(),
@@ -194,7 +195,7 @@ const VendorManagement = () => {
       setSelectedVendor(vendor);
 
       const response = await fetch(
-        `http://localhost:8080/api/vendor-candidates/vendor/${vendor.id}`,
+        `${API_BASE_URL}/api/vendor-candidates/vendor/${vendor.id}`,
         {
           headers: getAuthHeaders(),
         }
@@ -216,7 +217,7 @@ const VendorManagement = () => {
   const updateCandidateStatus = async (candidateId, status) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/vendor-candidates/status/${candidateId}?status=${status}`,
+        `${API_BASE_URL}/api/vendor-candidates/status/${candidateId}?status=${status}`,
         {
           method: "PUT",
           headers: getAuthHeaders(),

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import { API_BASE_URL } from "../../../../config/api";
 import "./ManageJobs.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +23,7 @@ const ManageJobs = () => {
     const fetchJobs = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:8080/api/aftergrad/user/${userId}`
+                `${API_BASE_URL}/api/aftergrad/user/${userId}`
             );
             setJobs(res.data);
         } catch (error) {
@@ -33,7 +34,7 @@ const ManageJobs = () => {
     const fetchCompany = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:8080/api/company-profile/user/${userId}`
+                `${API_BASE_URL}/api/company-profile/user/${userId}`
             );
             setCompany(res.data);
         } catch (error) {
@@ -43,7 +44,7 @@ const ManageJobs = () => {
 
     const getLogoUrl = () => {
         if (!company?.id) return null;
-        return `http://localhost:8080/api/company-profile/${company.id}/logo`;
+        return `${API_BASE_URL}/api/company-profile/${company.id}/logo`;
     };
 
     const handleEdit = (job) => {
@@ -53,7 +54,7 @@ const ManageJobs = () => {
     const handleDelete = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:8080/api/aftergrad/delete/${id}/${userId}`
+                `${API_BASE_URL}/api/aftergrad/delete/${id}/${userId}`
             );
             setJobs((prev) => prev.filter((job) => job.id !== id));
         } catch (error) {

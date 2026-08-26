@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./SuperAdminLayout.css";
 import { FaBars, FaBell, FaSearch } from "react-icons/fa";
 import DashboardOverview from "./DashboardOverview/DashboardOverview";
@@ -31,7 +32,7 @@ const SuperAdminLayout = () => {
     const fetchNotificationCount = async () => {
         try {
             const res = await axios.get(
-                "http://localhost:8080/api/notifications",
+                `${API_BASE_URL}/api/notifications`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -54,7 +55,7 @@ const SuperAdminLayout = () => {
 
         try {
             await axios.get(
-                `http://localhost:8080/admin/search?query=${value}`,
+                `${API_BASE_URL}/admin/search?query=${value}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

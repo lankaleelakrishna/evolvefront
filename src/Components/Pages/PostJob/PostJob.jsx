@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./PostJob.css";
 import NavBar from "../../HomePage/NavBar/NavBar";
 import axios from "axios";
@@ -203,7 +204,7 @@ export default function PostJob() {
 
             if (editJob) {
                 await axios.put(
-                    `http://localhost:8080/api/aftergrad/update/${editJob.id}`,
+                    `${API_BASE_URL}/api/aftergrad/update/${editJob.id}`,
                     payload,
                     {
                         headers: { "Content-Type": "application/json" }
@@ -213,7 +214,7 @@ export default function PostJob() {
                 alert("Job Updated Successfully!");
             } else {
                 await axios.post(
-                    "http://localhost:8080/api/aftergrad/add",
+                    `${API_BASE_URL}/api/aftergrad/add`,
                     payload,
                     {
                         headers: { "Content-Type": "application/json" }

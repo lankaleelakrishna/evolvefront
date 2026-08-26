@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./RecruitmentSolutions.css";
 import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -88,7 +89,7 @@ const RecruitmentSolutions = () => {
     const fetchEnquiries = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8080/api/recruitment/getAllEnquiries"
+                `${API_BASE_URL}/api/recruitment/getAllEnquiries`
             );
 
             setEnquiries(response.data);
@@ -193,7 +194,7 @@ const RecruitmentSolutions = () => {
 
         try {
             await axios.post(
-                "http://localhost:8080/api/hiring/submit",
+                `${API_BASE_URL}/api/hiring/submit`,
                 {
                     companyName: formData.company,
                     yourName: formData.name,
@@ -232,7 +233,7 @@ const RecruitmentSolutions = () => {
 
         try {
             await axios.delete(
-                "http://localhost:8080/api/recruitment/deleteAllEnquiries"
+                `${API_BASE_URL}/api/recruitment/deleteAllEnquiries`
             );
 
             setEnquiries([]);

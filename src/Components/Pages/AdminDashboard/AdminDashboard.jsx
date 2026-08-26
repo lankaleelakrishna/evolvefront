@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import {
   FaBell,
   FaRegCalendarAlt,
@@ -57,7 +58,7 @@ const AdminSupportRequests = ({ supportRequests, fetchSupportRequests }) => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/api/support/reply/${id}`,
+        `${API_BASE_URL}/api/support/reply/${id}`,
         { reply },
         {
           headers: {
@@ -86,7 +87,7 @@ const AdminSupportRequests = ({ supportRequests, fetchSupportRequests }) => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:8080/api/support/delete/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/support/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -236,7 +237,7 @@ const AdminContactMessages = ({ contactMessages, fetchContactMessages }) => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/api/contact/reply/${id}`,
+        `${API_BASE_URL}/api/contact/reply/${id}`,
         { reply },
         {
           headers: {
@@ -265,7 +266,7 @@ const AdminContactMessages = ({ contactMessages, fetchContactMessages }) => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:8080/api/contact/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/contact/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -407,7 +408,7 @@ const AdminDashboard = () => {
       const sendHeartbeat = async () => {
         try {
           await axios.post(
-            "http://localhost:8080/api/admin-session/heartbeat",
+            `${API_BASE_URL}/api/admin-session/heartbeat`,
             {},
             {
               headers: {
@@ -445,7 +446,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:8080/admin/users", {
+      const res = await axios.get(`${API_BASE_URL}/admin/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -461,7 +462,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:8080/api/support/all", {
+      const res = await axios.get(`${API_BASE_URL}/api/support/all`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -478,7 +479,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:8080/api/contact/alldetails",
+        `${API_BASE_URL}/api/contact/alldetails`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -502,7 +503,7 @@ const AdminDashboard = () => {
         await fetchContactMessages();
 
         const companiesRes = await axios.get(
-          "http://localhost:8080/api/company-profile",
+          `${API_BASE_URL}/api/company-profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -518,7 +519,7 @@ const AdminDashboard = () => {
         setCompanies(formattedCompanies);
 
         const jobsRes = await axios.get(
-          "http://localhost:8080/api/aftergrad/all",
+          `${API_BASE_URL}/api/aftergrad/all`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -549,7 +550,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:8080/admin/delete/${id}`, {
+      await axios.delete(`${API_BASE_URL}/admin/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -568,7 +569,7 @@ const AdminDashboard = () => {
       const newStatus = user.status === "ACTIVE" ? "BLOCKED" : "ACTIVE";
 
       await axios.put(
-        `http://localhost:8080/admin/update-status/${user.id}?status=${newStatus}`,
+        `${API_BASE_URL}/admin/update-status/${user.id}?status=${newStatus}`,
         {},
         {
           headers: {

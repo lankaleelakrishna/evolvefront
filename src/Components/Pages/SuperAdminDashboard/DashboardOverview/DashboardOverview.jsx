@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./DashboardOverview.css";
 import {
     FaUserShield,
@@ -29,7 +30,7 @@ const DashboardOverview = () => {
         try {
             const token = getToken();
 
-            const res = await axios.get("http://localhost:8080/admin/dashboard", {
+            const res = await axios.get(`${API_BASE_URL}/admin/dashboard`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

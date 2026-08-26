@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { API_BASE_URL } from "../../../../config/api";
 import "./BlogsDetailsPage.css";
 import NavBar from "../../../HomePage/NavBar/NavBar";
 import Footer from "../../../Footer/Footer";
@@ -25,7 +26,7 @@ const BlogDetailsPage = () => {
             }
 
             const res = await axios.get(
-                `http://localhost:8080/api/blogs/details?id=${String(id)}`
+                `${API_BASE_URL}/api/blogs/details?id=${String(id)}`
             );
 
             setBlog(res.data);

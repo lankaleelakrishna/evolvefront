@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { API_BASE_URL } from "../../../config/api";
 import "./CourseDetailsPage.css";
 import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -74,7 +75,7 @@ const CourseDetailsPage = () => {
     const fetchCourseDetails = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`http://localhost:8080/api/courses/${id}`);
+            const res = await axios.get(`${API_BASE_URL}/api/courses/${id}`);
             setCourse(res.data);
         } catch (err) {
             console.error("Course details error:", err);
@@ -96,7 +97,7 @@ const CourseDetailsPage = () => {
             }
 
             const res = await axios.get(
-                "http://localhost:8080/api/courseapp/all",
+                `${API_BASE_URL}/api/courseapp/all`,
                 getAuthHeaders()
             );
 
@@ -185,7 +186,7 @@ const CourseDetailsPage = () => {
 
         try {
             const res = await axios.post(
-                "http://localhost:8080/api/courseapp/add",
+                `${API_BASE_URL}/api/courseapp/add`,
                 newApplication,
                 getAuthHeaders()
             );

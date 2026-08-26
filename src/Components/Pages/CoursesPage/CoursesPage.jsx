@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./CoursesPage.css";
 import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -74,7 +75,7 @@ const CoursesPage = () => {
     const fetchCourses = async () => {
         try {
             setCoursesLoading(true);
-            const res = await axios.get(`http://localhost:8080/api/courses/all`);
+            const res = await axios.get(`${API_BASE_URL}/api/courses/all`);
             setCourses(res.data || []);
         } catch (err) {
             console.error("Error fetching courses:", err);
@@ -95,7 +96,7 @@ const CoursesPage = () => {
             }
 
             const res = await axios.get(
-                `http://localhost:8080/api/courseapp/all`,
+                `${API_BASE_URL}/api/courseapp/all`,
                 getAuthHeaders()
             );
 
@@ -212,7 +213,7 @@ const CoursesPage = () => {
 
         try {
             const res = await axios.post(
-                `http://localhost:8080/api/courseapp/add`,
+                `${API_BASE_URL}/api/courseapp/add`,
                 payload,
                 getAuthHeaders()
             );

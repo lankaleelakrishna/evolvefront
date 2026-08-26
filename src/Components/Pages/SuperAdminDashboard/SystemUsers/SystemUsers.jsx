@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../../../../config/api";
 import React, {
   useMemo,
   useState,
@@ -22,7 +23,7 @@ const SystemUsers = () => {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/aftergrad/super-users"
+        `${API_BASE_URL}/api/aftergrad/super-users`
       );
 
       const formatted = (
@@ -71,7 +72,7 @@ const SystemUsers = () => {
   ) => {
     try {
       await axios.put(
-        `http://localhost:8080/api/aftergrad/status/${id}?status=${status.toUpperCase()}`
+        `${API_BASE_URL}/api/aftergrad/status/${id}?status=${status.toUpperCase()}`
       );
 
       fetchUsers();

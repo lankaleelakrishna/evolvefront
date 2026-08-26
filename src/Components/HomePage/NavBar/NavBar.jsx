@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./NavBar.css";
 import Logo from "../../../assets/evlove logo.png";
 
@@ -50,12 +51,12 @@ export default function NavBar() {
 
       if (lowerRole === "candidate" && storedEmail) {
         setProfilePhoto(
-          `http://localhost:8080/api/profile/photo/${encodeURIComponent(
+          `${API_BASE_URL}/api/profile/photo/${encodeURIComponent(
             storedEmail
           )}?t=${Date.now()}`
         );
       } else if (lowerRole === "employee" && userId) {
-        fetch(`http://localhost:8080/api/company-profile/user/${userId}`)
+        fetch(`${API_BASE_URL}/api/company-profile/user/${userId}`)
           .then((res) => res.json())
           .then((data) => {
             if (data && data.logo) {
@@ -100,7 +101,7 @@ export default function NavBar() {
     if (token && currentRole === "admin") {
       try {
         await axios.post(
-          "http://localhost:8080/api/admin-session/logout",
+          `${API_BASE_URL}/api/admin-session/logout`,
           {},
           {
             headers: {

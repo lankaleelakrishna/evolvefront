@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBookmark, FaBriefcase } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CandidateSavedJobs.css";
 
 const CandidateSavedJobs = ({
@@ -25,7 +26,7 @@ const CandidateSavedJobs = ({
 
         const token = localStorage.getItem("token");
 
-        fetch(`http://localhost:8080/api/saved-jobs/${userId}`, {
+        fetch(`${API_BASE_URL}/api/saved-jobs/${userId}`, {
             headers: {
                 Authorization: "Bearer " + token,
             },
@@ -68,7 +69,7 @@ const CandidateSavedJobs = ({
     const fetchCompanyLogo = async (userId) => {
         try {
             const res = await fetch(
-                `http://localhost:8080/api/company-profile/user/${userId}`
+                `${API_BASE_URL}/api/company-profile/user/${userId}`
             );
 
             if (!res.ok) return;
@@ -94,7 +95,7 @@ const CandidateSavedJobs = ({
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:8080/api/saved-jobs/del?userId=${userId}&jobId=${job.id}`,
+                `${API_BASE_URL}/api/saved-jobs/del?userId=${userId}&jobId=${job.id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -138,7 +139,7 @@ const CandidateSavedJobs = ({
                         const companyId = companyMap[job.userId];
 
                         const logoUrl = companyId
-                            ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                            ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                             : "https://via.placeholder.com/60";
 
                         const isApplied = applications.some(

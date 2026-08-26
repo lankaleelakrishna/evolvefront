@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./NotificationsPage.css";
 import axios from "axios";
 
@@ -24,7 +25,7 @@ const NotificationsPage = () => {
     const fetchNotifications = async () => {
         try {
             const res = await axios.get(
-                "http://localhost:8080/api/notifications",
+                `${API_BASE_URL}/api/notifications`,
                 getAuthHeaders()
             );
 
@@ -52,7 +53,7 @@ const NotificationsPage = () => {
     const markAsRead = async (id) => {
         try {
             await axios.get(
-                `http://localhost:8080/api/notifications/seen/${id}`,
+                `${API_BASE_URL}/api/notifications/seen/${id}`,
                 getAuthHeaders()
             );
 
@@ -69,7 +70,7 @@ const NotificationsPage = () => {
     const markAllAsRead = async () => {
         try {
             await axios.get(
-                "http://localhost:8080/api/notifications/seen-all",
+                `${API_BASE_URL}/api/notifications/seen-all`,
                 getAuthHeaders()
             );
 

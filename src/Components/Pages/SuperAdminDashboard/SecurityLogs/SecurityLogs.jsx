@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../../../../config/api";
 import React, {
   useMemo,
   useState,
@@ -25,7 +26,7 @@ const SecurityLogs = () => {
         localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:8080/api/security-logs/all",
+        `${API_BASE_URL}/api/security-logs/all`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -77,7 +78,7 @@ const SecurityLogs = () => {
         localStorage.getItem("token");
 
       await axios.delete(
-        "http://localhost:8080/api/security-logs/clear",
+        `${API_BASE_URL}/api/security-logs/clear`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

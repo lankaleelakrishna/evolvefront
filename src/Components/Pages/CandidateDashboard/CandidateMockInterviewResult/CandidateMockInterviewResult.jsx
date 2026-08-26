@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CandidateMockInterviewResult.css";
 
 const CandidateMockInterviewResult = () => {
@@ -20,7 +21,7 @@ const CandidateMockInterviewResult = () => {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/mock-interview/result/${userId}`,
+        `${API_BASE_URL}/api/mock-interview/result/${userId}`,
         {
           method: "GET",
           headers: {

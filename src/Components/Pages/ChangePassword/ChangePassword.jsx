@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./ChangePassword.css";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -72,7 +73,7 @@ const ChangePassword = () => {
       }
 
       const response = await fetch(
-        "http://localhost:8080/auth/change-password",
+        `${API_BASE_URL}/auth/change-password`,
         {
           method: "PUT",
           headers: {

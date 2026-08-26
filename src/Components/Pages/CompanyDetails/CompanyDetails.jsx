@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./CompanyDetails.css";
 import NavBar from "../../HomePage/NavBar/NavBar";
 import Footer from "../../Footer/Footer";
@@ -30,7 +31,7 @@ const CompanyDetails = () => {
         try {
 
             const response = await fetch(
-                `http://localhost:8080/api/company-profile/${id}`
+                `${API_BASE_URL}/api/company-profile/${id}`
             );
 
             const companyData = await response.json();
@@ -40,7 +41,7 @@ const CompanyDetails = () => {
             setCompany(companyData);
 
             const jobsResponse = await fetch(
-                `http://localhost:8080/api/aftergrad/company/${companyData.userId}`
+                `${API_BASE_URL}/api/aftergrad/company/${companyData.userId}`
             );
 
             const jobsData = await jobsResponse.json();
@@ -106,7 +107,7 @@ const CompanyDetails = () => {
     }
 
     const logoUrl =
-        `http://localhost:8080/api/company-profile/${company.id}/logo`;
+        `${API_BASE_URL}/api/company-profile/${company.id}/logo`;
 
     return (
         <>

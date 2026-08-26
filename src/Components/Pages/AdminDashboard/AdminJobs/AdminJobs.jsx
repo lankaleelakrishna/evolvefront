@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
+import { API_BASE_URL } from "../../../../config/api";
 import "./AdminJobs.css";
 import axios from "axios";
 
@@ -24,7 +25,7 @@ const AdminJobs = ({ filteredJobs: propJobs, onRemoveJob }) => {
 
     const fetchJobs = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/api/aftergrad/expired");
+            const res = await axios.get(`${API_BASE_URL}/api/aftergrad/expired`);
 
             const formatted = (res.data || []).map((j) => ({
                 id: j.id,
@@ -47,7 +48,7 @@ const AdminJobs = ({ filteredJobs: propJobs, onRemoveJob }) => {
         }
 
         try {
-            await axios.delete(`http://localhost:8080/api/aftergrad/admin/delete/${id}`);
+            await axios.delete(`${API_BASE_URL}/api/aftergrad/admin/delete/${id}`);
 
             setJobs((prev) => prev.filter((job) => job.id !== id));
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./Jobs.css";
 import Footer from "../../../Footer/Footer";
 import { useNavigate } from "react-router-dom";
@@ -47,7 +48,7 @@ const Jobs = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:8080/api/aftergrad/all"
+        `${API_BASE_URL}/api/aftergrad/all`
       );
 
       const mappedJobs = response.data.map((job) => ({
@@ -82,7 +83,7 @@ const Jobs = () => {
     try {
 
       const response = await axios.get(
-        `http://localhost:8080/api/company-profile/user/${userId}`
+        `${API_BASE_URL}/api/company-profile/user/${userId}`
       );
 
       setCompanyMap((prev) => ({
@@ -453,7 +454,7 @@ const Jobs = () => {
                 const companyId = companyMap[job.userId];
 
                 const logoUrl = companyId
-                  ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                  ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                   : "https://via.placeholder.com/50";
 
                 return (

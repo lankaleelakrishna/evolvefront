@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import "./AdminAnalytics.css";
 import axios from "axios";
 
@@ -25,7 +26,7 @@ const AdminAnalytics = ({ analytics: propAnalytics }) => {
             try {
 
                 const res = await axios.get(
-                    "http://localhost:8080/admin/dashboard"
+                    `${API_BASE_URL}/admin/dashboard`
                 );
 
                 setAnalytics(res.data);

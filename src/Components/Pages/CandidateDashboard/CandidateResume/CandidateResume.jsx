@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaFilePdf, FaImage, FaSave } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CandidateResume.css";
 import axios from "axios";
 
@@ -20,7 +21,7 @@ const CandidateResume = ({ resumeFile, onResumeUpload }) => {
 
         if (!email || !token) return;
 
-        fetch(`http://localhost:8080/api/profile/${email}`, {
+        fetch(`${API_BASE_URL}/api/profile/${email}`, {
             headers: {
                 Authorization: "Bearer " + token
             }
@@ -70,7 +71,7 @@ const CandidateResume = ({ resumeFile, onResumeUpload }) => {
             }
 
             await axios.post(
-                "http://localhost:8080/api/profile/upload",
+                `${API_BASE_URL}/api/profile/upload`,
                 formData,
                 {
                     headers: {

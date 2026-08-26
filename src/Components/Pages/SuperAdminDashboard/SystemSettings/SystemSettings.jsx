@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../../../../config/api";
 import React, {
   useState,
   useEffect,
@@ -30,7 +31,7 @@ const SystemSettings = () => {
       try {
         const res =
           await axios.get(
-            "http://localhost:8080/api/system-settings"
+            `${API_BASE_URL}/api/system-settings`
           );
 
         setSettings({
@@ -108,7 +109,7 @@ const SystemSettings = () => {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/system-settings",
+        `${API_BASE_URL}/api/system-settings`,
         settings
       );
 

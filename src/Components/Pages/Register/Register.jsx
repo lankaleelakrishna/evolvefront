@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./Register.css";
 
 import Footer from "../../Footer/Footer";
@@ -144,7 +145,7 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/otp/send?email=${formData.email}&mobile=${formData.mobile}&purpose=REGISTER`,
+        `${API_BASE_URL}/api/otp/send?email=${formData.email}&mobile=${formData.mobile}&purpose=REGISTER`,
         {
           method: "POST",
         }
@@ -180,7 +181,7 @@ const Register = () => {
 
     try {
       const emailResponse = await fetch(
-        `http://localhost:8080/api/otp/verify?emailOrMobile=${formData.email}&otp=${otp}&purpose=REGISTER`,
+        `${API_BASE_URL}/api/otp/verify?emailOrMobile=${formData.email}&otp=${otp}&purpose=REGISTER`,
         {
           method: "POST",
         }
@@ -193,7 +194,7 @@ const Register = () => {
       }
 
       const mobileResponse = await fetch(
-        `http://localhost:8080/api/otp/verify?emailOrMobile=${formData.mobile}&otp=${otp}&purpose=REGISTER`,
+        `${API_BASE_URL}/api/otp/verify?emailOrMobile=${formData.mobile}&otp=${otp}&purpose=REGISTER`,
         {
           method: "POST",
         }
@@ -247,7 +248,7 @@ const Register = () => {
       };
 
       const response = await fetch(
-        "http://localhost:8080/api/aftergrad/register",
+        `${API_BASE_URL}/api/aftergrad/register`,
         {
           method: "POST",
           headers: {

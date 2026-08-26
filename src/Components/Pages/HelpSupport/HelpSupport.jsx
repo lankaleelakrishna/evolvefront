@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 
+import { API_BASE_URL } from "../../../config/api";
 import "./HelpSupport.css";
 
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -159,7 +160,7 @@ const HelpSupport = () => {
             setLoading(true);
 
             const response = await fetch(
-                "http://localhost:8080/api/support/add",
+                `${API_BASE_URL}/api/support/add`,
                 {
                     method: "POST",
                     headers: {

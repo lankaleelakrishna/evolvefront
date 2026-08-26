@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../../config/api";
 import {
   FaBuilding,
   FaPlusCircle,
@@ -18,7 +19,7 @@ const EmployeeSidebar = ({ activeMenu, onMenuChange }) => {
 
     if (!userId) return;
 
-    fetch(`http://localhost:8080/api/company-profile/user/${userId}`)
+    fetch(`${API_BASE_URL}/api/company-profile/user/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         if (data && data.logo) {

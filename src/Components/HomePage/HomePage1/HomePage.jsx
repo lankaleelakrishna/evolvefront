@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import "./HomePage.css";
 
 import NavBar from "../NavBar/NavBar";
@@ -52,7 +53,7 @@ const HomePage = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/aftergrad/all");
+      const response = await fetch(`${API_BASE_URL}/api/aftergrad/all`);
       const data = await response.json();
 
       const filteredJobs = data.filter(
@@ -67,7 +68,7 @@ const HomePage = () => {
         filteredJobs.map(async (job) => {
           try {
             const companyResponse = await fetch(
-              `http://localhost:8080/api/company-profile/user/${job.userId}`
+              `${API_BASE_URL}/api/company-profile/user/${job.userId}`
             );
 
             const company = await companyResponse.json();
@@ -89,7 +90,7 @@ const HomePage = () => {
   const fetchCandidateCount = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/aftergrad/candidates/count"
+        `${API_BASE_URL}/api/aftergrad/candidates/count`
       );
 
       if (!response.ok) {
@@ -208,7 +209,7 @@ const HomePage = () => {
                   const companyId = companyMap[job.userId];
 
                   const logoUrl = companyId
-                    ? `http://localhost:8080/api/company-profile/${companyId}/logo`
+                    ? `${API_BASE_URL}/api/company-profile/${companyId}/logo`
                     : "https://via.placeholder.com/100";
 
                   return (

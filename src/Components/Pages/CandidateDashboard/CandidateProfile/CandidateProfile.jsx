@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaSave, FaFilePdf, FaImage } from "react-icons/fa";
+import { API_BASE_URL } from "../../../../config/api";
 import "./CandidateProfile.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,7 +23,7 @@ const CandidateProfile = ({
   useEffect(() => {
     if (!userEmail) return;
 
-    fetch(`http://localhost:8080/api/profile/${userEmail}`, {
+    fetch(`${API_BASE_URL}/api/profile/${userEmail}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -166,7 +167,7 @@ const CandidateProfile = ({
       formData.append("photo", photoFile);
     }
 
-    await axios.post("http://localhost:8080/api/profile/upload", formData, {
+    await axios.post(`${API_BASE_URL}/api/profile/upload`, formData, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -331,7 +332,7 @@ const CandidateProfile = ({
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/profile/save", {
+      const response = await fetch(`${API_BASE_URL}/api/profile/save`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

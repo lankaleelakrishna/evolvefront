@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import { API_BASE_URL } from "../../../config/api";
 import "./InternshipPage.css";
 
 import Footer from "../../Footer/Footer";
@@ -26,7 +27,7 @@ export default function InternshipPage() {
   const fetchInternships = async () => {
     try {
       const internshipResponse = await fetch(
-        "http://localhost:8080/api/aftergrad/internships"
+        `${API_BASE_URL}/api/aftergrad/internships`
       );
 
       const internshipData =
@@ -42,7 +43,7 @@ export default function InternshipPage() {
         internshipData.map(async (item) => {
           try {
             const companyResponse = await fetch(
-              `http://localhost:8080/api/company-profile/user/${item.userId}`
+              `${API_BASE_URL}/api/company-profile/user/${item.userId}`
             );
 
             const company =
@@ -58,7 +59,7 @@ export default function InternshipPage() {
                   company.companyName ||
                   item.compName,
 
-                logo: `http://localhost:8080/api/company-profile/${company.id}/logo`,
+                logo: `${API_BASE_URL}/api/company-profile/${company.id}/logo`,
               });
             }
           } catch (error) {

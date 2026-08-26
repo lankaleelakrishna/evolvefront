@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserCheck, FaUserTimes } from "react-icons/fa";
 import axios from "axios";
+import { API_BASE_URL } from "../../../../config/api";
 import "./Applicants.css";
 
 const Applicants = ({ applicants = [], fetchApplicants }) => {
@@ -10,7 +11,7 @@ const Applicants = ({ applicants = [], fetchApplicants }) => {
             const status = action === "shortlist" ? "SHORTLISTED" : "REJECTED";
 
             await axios.put(
-                `http://localhost:8080/application/update-status/${id}`,
+                `${API_BASE_URL}/application/update-status/${id}`,
                 null,
                 {
                     params: { status },

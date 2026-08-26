@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../../config/api";
 import {
   FaTachometerAlt,
   FaBriefcase,
@@ -59,7 +60,7 @@ const VendorDashboard = () => {
 
   const fetchVendorDetails = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/vendors/all", {
+      const response = await fetch(`${API_BASE_URL}/api/vendors/all`, {
         headers: getAuthHeaders(),
       });
 
@@ -78,7 +79,7 @@ const VendorDashboard = () => {
   const fetchAssignedJobs = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/vendor-jobs/vendor-email?email=${encodeURIComponent(
+        `${API_BASE_URL}/api/vendor-jobs/vendor-email?email=${encodeURIComponent(
           vendorEmail
         )}`,
         {
@@ -98,7 +99,7 @@ const VendorDashboard = () => {
   const fetchCandidates = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/vendor-candidates/vendor-email?email=${encodeURIComponent(
+        `${API_BASE_URL}/api/vendor-candidates/vendor-email?email=${encodeURIComponent(
           vendorEmail
         )}`,
         {
@@ -165,7 +166,7 @@ const getCompanyName = (assignment) => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/vendor-candidates/submit?vendorId=${currentVendor.id}&jobId=${selectedJobId}`,
+        `${API_BASE_URL}/api/vendor-candidates/submit?vendorId=${currentVendor.id}&jobId=${selectedJobId}`,
         {
           method: "POST",
           headers: {
