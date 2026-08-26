@@ -15,6 +15,7 @@ const ManageJobs = () => {
   useEffect(() => {
     fetchJobs();
     fetchCompany();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchJobs = async () => {

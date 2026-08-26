@@ -39,6 +39,7 @@ const Jobs = () => {
 
   useEffect(() => {
     fetchJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchJobs = async () => {
@@ -136,6 +137,7 @@ const Jobs = () => {
 
   useEffect(() => {
     applyFilters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters, jobsData]);
 
   const handleFilterChange = (key, value) => {

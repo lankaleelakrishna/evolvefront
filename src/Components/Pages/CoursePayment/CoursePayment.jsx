@@ -25,6 +25,7 @@ const CoursePayment = () => {
 
     useEffect(() => {
         fetchPaymentDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [courseId]);
 
     const formatPrice = (price) => {

@@ -22,6 +22,7 @@ const CompanyDetails = () => {
 
         fetchCompany();
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     const fetchCompany = async () => {

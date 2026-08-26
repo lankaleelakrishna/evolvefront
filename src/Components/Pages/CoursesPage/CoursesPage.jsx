@@ -56,6 +56,7 @@ const CoursesPage = () => {
     useEffect(() => {
         fetchCourses();
         fetchApplications();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const formatPrice = (price) => {

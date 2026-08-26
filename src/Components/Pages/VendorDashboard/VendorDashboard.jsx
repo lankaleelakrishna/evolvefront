@@ -50,6 +50,7 @@ const VendorDashboard = () => {
     fetchVendorDetails();
     fetchAssignedJobs();
     fetchCandidates();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getAuthHeaders = () => ({

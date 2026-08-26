@@ -132,6 +132,7 @@ const CandidateDashboard = () => {
   useEffect(() => {
     fetchApplications();
     fetchSavedJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

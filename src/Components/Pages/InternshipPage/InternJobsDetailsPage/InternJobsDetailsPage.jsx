@@ -17,12 +17,12 @@ const InternJobsDetailsPage = () => {
   const { id } = useParams();
 
   const [job, setJob] = useState(null);
-  const [relatedJobs, setRelatedJobs] = useState([]);
   const [companyId, setCompanyId] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchInternshipDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchInternshipDetails = async () => {
@@ -52,20 +52,6 @@ const InternJobsDetailsPage = () => {
           );
         }
       }
-
-      const relatedResponse = await fetch(
-        "http://localhost:8080/api/aftergrad/internships"
-      );
-
-      const relatedData =
-        await relatedResponse.json();
-
-      const filtered = relatedData.filter(
-        (item) =>
-          String(item.id) !== String(id)
-      );
-
-      setRelatedJobs(filtered);
     } catch (error) {
       console.error(
         "Internship details error:",

@@ -1,10 +1,8 @@
 import React, { useMemo, useState , useEffect } from "react";
-import { FaBell, FaRegCalendarAlt, FaSearch } from "react-icons/fa";
 import "./EmployerDashboard.css";
 
 import EmployeeSidebar from "./EmployeeSidebar/EmployeeSidebar";
 import CompanyProfile from "./CompanyProfile/CompanyProfile";
-import PostJob from "./PostJob/PostJob";
 import ManageJobs from "./ManageJobs/ManageJobs";
 import Applicants from "./Applicants/Applicants";
 import NavBar from "../../HomePage/NavBar/NavBar";
@@ -26,22 +24,9 @@ const [searchTerm, setSearchTerm] = useState("");
 
 const [companyProfile, setCompanyProfile] = useState({});
 
-const [jobForm, setJobForm] = useState({
-    title: "",
-    department: "",
-    location: "",
-    salary: "",
-    type: "Full Time",
-    experience: "",
-    description: "",
-});
-
 const [jobs, setJobs] = useState([]);
-const [editJobId, setEditJobId] = useState(null);
 const [applicants, setApplicants] = useState([]);
 const userId = Number(localStorage.getItem("userId"));
-
-const company = localStorage.getItem("companyName");
 
 const fetchApplicants = async () => {
     try {
@@ -96,17 +81,6 @@ const handleSidebarChange = (menu) => {
 
     setActiveMenu(menu);
     setSearchTerm("");
-    setEditJobId(null);
-
-    setJobForm({
-        title: "",
-        department: "",
-        location: "",
-        salary: "",
-        type: "Full Time",
-        experience: "",
-        description: "",
-    });
 };
 
 const handleCompanyProfileChange = (e) => {
@@ -137,83 +111,8 @@ const handleSaveCompanyProfile = async (e) => {
     }
 };
 
-const handleJobFormChange = (e) => {
-    setJobForm({
-        ...jobForm,
-        [e.target.name]: e.target.value,
-    });
-};
-
-const resetJobForm = () => {
-    setJobForm({
-        title: "",
-        department: "",
-        location: "",
-        salary: "",
-        type: "Full Time",
-        experience: "",
-        description: "",
-    });
-};
-
-
-const handlePostJob = async (e) => {
-    e.preventDefault();
-
-    if (
-        !jobForm.title ||
-        !jobForm.department ||
-        !jobForm.location ||
-        !jobForm.salary ||
-        !jobForm.type ||
-        !jobForm.experience ||
-        !jobForm.description
-    ) {
-        alert("Please fill all job fields.");
-        return;
-    }
-
-    try {
-        if (editJobId) {
-
-            const res = await axios.put(
-                `http://localhost:8080/api/jobs/${editJobId}`,
-                jobForm
-            );
-
-            setJobs((prevJobs) =>
-                prevJobs.map((job) =>
-                    job.id === editJobId ? res.data : job
-                )
-            );
-
-            alert("Job updated successfully!");
-            setEditJobId(null);
-
-        } else {
-
-            const res = await axios.post(
-                "http://localhost:8080/api/jobs",
-                jobForm
-            );
-
-            setJobs((prevJobs) => [res.data, ...prevJobs]);
-
-            alert("New job posted successfully!");
-        }
-
-        resetJobForm();
-
-    } catch (error) {
-        console.error(error);
-    }
-};
-
-
 const handleEditJob = (job) => {
-    setActiveMenu("postJob");
-    setEditJobId(job.id);
-    setJobForm(job);
+    navigate("/postjob", { state: { job } });
 };
 
 

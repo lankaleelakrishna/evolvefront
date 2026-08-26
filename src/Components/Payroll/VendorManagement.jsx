@@ -35,6 +35,7 @@ const VendorManagement = () => {
   useEffect(() => {
     fetchVendors();
     fetchJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getAuthHeaders = () => ({

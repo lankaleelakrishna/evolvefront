@@ -42,7 +42,6 @@ const MockInterview = () => {
     const [loadingJob, setLoadingJob] = useState(true);
     const [jobError, setJobError] = useState("");
     const [step, setStep] = useState("instructions");
-    const [introStream, setIntroStream] = useState(null);
     const [introSeconds, setIntroSeconds] = useState(0);
     const [isIntroRecording, setIsIntroRecording] = useState(false);
     const [introVideoUrl, setIntroVideoUrl] = useState(null);
@@ -57,6 +56,7 @@ const MockInterview = () => {
 
     useEffect(() => {
         fetchJobDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     useEffect(() => {
@@ -80,6 +80,7 @@ const MockInterview = () => {
         if (introSeconds >= MAX_INTRO_TIME && isIntroRecording) {
             stopIntroRecording();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [introSeconds, isIntroRecording]);
 
     const getAuthHeaders = () => {
@@ -253,7 +254,6 @@ const MockInterview = () => {
         if (introStreamRef.current) {
             introStreamRef.current.getTracks().forEach((track) => track.stop());
             introStreamRef.current = null;
-            setIntroStream(null);
         }
     };
 
@@ -411,7 +411,6 @@ const MockInterview = () => {
             ]);
 
             introStreamRef.current = combinedStream;
-            setIntroStream(combinedStream);
             introChunksRef.current = [];
 
             const recorder = new MediaRecorder(combinedStream);
@@ -467,7 +466,6 @@ const MockInterview = () => {
         if (introStreamRef.current) {
             introStreamRef.current.getTracks().forEach((track) => track.stop());
             introStreamRef.current = null;
-            setIntroStream(null);
         }
     };
 

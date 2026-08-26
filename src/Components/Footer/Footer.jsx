@@ -5,7 +5,6 @@ import Logo from "../../assets/evlove logo.png";
 import {
   FaFacebookF,
   FaTwitter,
-  FaLinkedinIn,
   FaInstagram,
   FaMapMarkerAlt,
   FaEnvelope,

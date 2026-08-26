@@ -41,6 +41,7 @@ const AdminLoginReports = () => {
 
     useEffect(() => {
         fetchLogs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedDate]);
 
     const downloadFile = async (type) => {

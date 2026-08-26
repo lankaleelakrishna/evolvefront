@@ -13,6 +13,7 @@ const DashboardOverview = () => {
 
     useEffect(() => {
         fetchDashboard();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const getToken = () => {

@@ -55,6 +55,7 @@ const CandidateSavedJobs = ({
 
     useEffect(() => {
         fetchSavedJobs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {

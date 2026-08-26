@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./PostJob.css";
-import Footer from "../../Footer/Footer";
 import NavBar from "../../HomePage/NavBar/NavBar";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";

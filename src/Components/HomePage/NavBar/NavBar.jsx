@@ -20,13 +20,11 @@ export default function NavBar() {
   const [profilePhoto, setProfilePhoto] = useState(null);
 
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-  const [showCareerDropdown, setShowCareerDropdown] = useState(false);
   const [showSettingsMenu, setShowSettingsMenu] = useState(false);
 
   const navigate = useNavigate();
 
   const profileRef = useRef(null);
-  const careerRef = useRef(null);
 
   useEffect(() => {
     const storedRole = localStorage.getItem("role");
@@ -85,10 +83,6 @@ export default function NavBar() {
       if (profileRef.current && !profileRef.current.contains(event.target)) {
         setShowProfileMenu(false);
         setShowSettingsMenu(false);
-      }
-
-      if (careerRef.current && !careerRef.current.contains(event.target)) {
-        setShowCareerDropdown(false);
       }
     };
 
