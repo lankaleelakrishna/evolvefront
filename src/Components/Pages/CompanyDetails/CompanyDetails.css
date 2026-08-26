@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.companyDetailsPage {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: "Inter", sans-serif;
+}
+
+.companyDetailsBanner {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.companyDetailsBanner h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.companyDetailsBanner p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.companyDetailsContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+.companyDetailsHeader {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 28px;
+    padding: 34px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.companyDetailsHeaderLeft {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    min-width: 280px;
+    padding-right: 200px;
+}
+
+.companyDetailsLogo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.companyDetailsInfo h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.companyDetailsInfo p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.companyDetailsWebsite {
+    display: inline-block;
+    margin-top: 6px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.companyDetailsStats {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+}
+
+.companyDetailsStatCard {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    transition: 0.3s ease;
+}
+
+.companyDetailsStatCard:hover {
+    transform: translateY(-4px);
+}
+
+.companyDetailsStatCard h3 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.companyDetailsStatCard span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.companyDetailsTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.companyDetailsTabs button {
+    border: none;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    padding: 14px 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.companyDetailsTabs button.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+.companyDetailsTabContent {
+    background: transparent;
+}
+
+.companyDetailsMainCard,
+.companyDetailsJobCard,
+.companyDetailsReviewCard,
+.companyDetailsLifeCard {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 26px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.companyDetailsMainCard h3,
+.companyDetailsLifeCard h3 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.companyDetailsAboutText {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.9;
+}
+
+
+.companyDetailsJobsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.companyDetailsJobCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-radius: 22px;
+    transition: 0.3s ease;
+}
+
+.companyDetailsJobCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+.companyDetailsJobCard h4 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.companyDetailsJobCard p {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.companyDetailsJobCard button,
+.companyDetailsNotFound button {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.companyDetailsJobCard button:hover,
+.companyDetailsNotFound button:hover {
+    transform: translateY(-2px);
+}
+
+
+.companyDetailsEmptyText {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+
+.companyDetailsNotFound {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+.companyDetailsNotFound h2 {
+    font-size: 34px;
+    color: #111827;
+}
+
+.companyDetailsNotFound p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .companyDetailsStats {
+        position: static;
+        margin-top: 24px;
+    }
+
+    .companyDetailsHeaderLeft {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .companyDetailsBanner h1 {
+        font-size: 32px;
+    }
+
+    .companyDetailsHeaderLeft {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .companyDetailsInfo h2 {
+        font-size: 32px;
+    }
+
+    .companyDetailsStatCard {
+        width: 100%;
+        height: 130px;
+    }
+
+    .companyDetailsJobCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

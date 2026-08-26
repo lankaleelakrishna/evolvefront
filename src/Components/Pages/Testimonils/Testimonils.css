@@ -1,0 +1,215 @@
+.jobTestimonials {
+    width: 100%;
+    padding: 60px 25px 50px;
+    background: #f8fafc;
+    font-family: "Inter", "Poppins", "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+}
+ 
+.jobTestimonials * {
+    box-sizing: border-box;
+}
+ 
+.jobTestimonialsHeader {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+ 
+.jobTestimonialsBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 4px;
+}
+ 
+.jobTestimonialsBadge span {
+    font-size: 24px;
+    line-height: 1;
+    color: #f59e0b;
+}
+ 
+.jobTestimonialsHeader h2 {
+    margin: 15px 0 12px;
+    color: #1e3a8a;
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 900;
+}
+ 
+.jobTestimonialsHeader h2 span {
+    color: #2563eb;
+}
+ 
+.jobTestimonialsHeader p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}
+ 
+.jobTestimonialsCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+.jobTestimonialCard {
+    position: relative;
+    min-height: 320px;
+    background: #ffffff;
+    border-radius: 28px 28px 32px 6px;
+    padding: 30px 22px 24px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+    border-bottom: 5px solid #2563eb;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+ 
+.jobTestimonialCard:hover {
+    transform: translateY(-8px);
+    border-color: #bfdbfe;
+    box-shadow: 0 22px 50px rgba(37, 99, 235, 0.14);
+}
+ 
+.jobTestimonialCard::after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 55px;
+    height: 55px;
+    border-right: 5px solid #2563eb;
+    border-bottom: 5px solid #2563eb;
+    border-radius: 0 0 30px 0;
+}
+ 
+.jobQuoteIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 50px;
+    font-family: Georgia, serif;
+    font-weight: 900;
+    text-align: center;
+}
+ 
+.jobStars {
+    color: #f59e0b;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+ 
+.jobReview {
+    margin: 0;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+ 
+.jobUserInfo {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.jobUserInfo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+    background: #ffffff;
+    border: 2px solid #bfdbfe;
+}
+ 
+.jobUserInfo h4 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: 900;
+}
+ 
+.jobUserInfo span {
+    display: block;
+    margin-top: 4px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+ 
+.jobTestimonialDots {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+ 
+.jobTestimonialDots span {
+    width: 18px;
+    height: 8px;
+    border-radius: 20px;
+    background: #bfdbfe;
+}
+ 
+.jobTestimonialDots .active {
+    background: #2563eb;
+}
+ 
+@media (max-width: 1100px) {
+    .jobTestimonialsCards {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 720px;
+    }
+ 
+    .jobTestimonialsHeader h2 {
+        font-size: 34px;
+    }
+}
+ 
+@media (max-width: 650px) {
+    .jobTestimonials {
+        padding: 45px 14px;
+    }
+ 
+    .jobTestimonialsHeader {
+        margin-bottom: 30px;
+    }
+ 
+    .jobTestimonialsHeader h2 {
+        font-size: 28px;
+    }
+ 
+    .jobTestimonialsHeader p {
+        font-size: 14px;
+    }
+ 
+    .jobTestimonialsCards {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+ 
+    .jobTestimonialCard {
+        min-height: auto;
+        padding: 28px 20px 24px;
+    }
+}
+ 

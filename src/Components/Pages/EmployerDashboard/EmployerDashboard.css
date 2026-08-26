@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+.employeeDashboardLayout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+.employeeDashboardMainContent {
+    margin-left: 290px;
+    width: calc(100% - 290px);
+    min-height: 100vh;
+    padding: 28px;
+}
+
+.employeeDashboardTopbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.employeeDashboardTopbar h1 {
+    font-size: 30px;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.employeeDashboardTopbar p {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+.employeeDashboardTopbarRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.employeeDashboardSearchBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    border-radius: 12px;
+    min-width: 270px;
+}
+
+.employeeDashboardSearchBox svg {
+    color: #6b7280;
+}
+
+.employeeDashboardSearchBox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    color: #111827;
+}
+
+.employeeDashboardIconBtn,
+.employeeDashboardDateBtn {
+    border: none;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.employeeDashboardIconBtn:hover,
+.employeeDashboardDateBtn:hover {
+    background: #eff6ff;
+}
+
+.employeeDashboardCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.employeeDashboardSummaryCard {
+    border-radius: 18px;
+    padding: 22px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.employeeDashboardSummaryCard h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.employeeDashboardSummaryCard h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.employeeDashboardSummaryCard p {
+    font-size: 13px;
+}
+
+.blueCard {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.purpleCard {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.greenCard {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.redCard {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.employeeDashboardSections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .employeeDashboardCardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .employeeDashboardMainContent {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+}
+
+@media (max-width: 768px) {
+    .employeeDashboardLayout {
+        flex-direction: column;
+    }
+
+    .employeeDashboardMainContent {
+        margin-left: 0;
+        width: 100%;
+        padding: 18px;
+    }
+
+    .employeeDashboardCardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .employeeDashboardTopbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .employeeDashboardTopbarRight {
+        width: 100%;
+    }
+
+    .employeeDashboardSearchBox {
+        width: 100%;
+        min-width: unset;
+    }
+}

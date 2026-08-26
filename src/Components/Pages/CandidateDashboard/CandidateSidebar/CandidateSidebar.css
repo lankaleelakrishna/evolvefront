@@ -1,0 +1,305 @@
+.candidateDashboardSidebar {
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 82px;
+  left: 0;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.candidateDashboardSidebarTop {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.candidateDashboardLogoBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 6px;
+}
+
+.candidateDashboardLogoIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.candidateDashboardLogoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.candidateDashboardLogoSubtext {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.candidateDashboardSidebarMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.candidateDashboardSidebarMenu li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #dbeafe;
+  transition: all 0.3s ease;
+}
+
+.candidateDashboardSidebarMenu li:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.candidateDashboardSidebarMenu li.active {
+  background: #1637a3;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.25);
+}
+
+.candidateDashboardSidebarBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 20px;
+}
+
+.candidateDashboardAdminProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.candidateDashboardAdminAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.candidateDashboardAdminProfile h4 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.candidateDashboardAdminProfile p {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.candidateDashboardHamburger {
+  display: none;
+}
+
+.candidateDashboardSidebarOverlay {
+  display: none;
+}
+
+.candidateDashboardProfileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.candidateDashboardSmallProfileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .candidateDashboardSidebar {
+    width: 250px;
+  }
+
+  .candidateDashboardLogoText {
+    font-size: 18px;
+  }
+
+  .candidateDashboardSidebarMenu li {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidateDashboardHamburger {
+    display: flex;
+    position: relative;
+    margin: 14px 0 14px 14px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 6000;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  }
+
+  .candidateDashboardSidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 270px;
+    height: 100vh;
+    padding: 90px 16px 20px;
+    background: #1e3a8a;
+    overflow-y: auto;
+    z-index: 5000;
+  }
+
+  .candidateDashboardSidebar.showSidebar {
+    left: 0;
+  }
+
+  .candidateDashboardSidebarOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 4999;
+  }
+
+  .candidateDashboardSidebarOverlay.show {
+    display: block;
+  }
+
+  .candidateDashboardSidebarTop {
+    gap: 24px;
+  }
+
+  .candidateDashboardLogoBox {
+    padding: 6px 2px;
+  }
+
+  .candidateDashboardLogoIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .candidateDashboardLogoText {
+    font-size: 17px;
+  }
+
+  .candidateDashboardLogoSubtext {
+    font-size: 12px;
+  }
+
+  .candidateDashboardSidebarMenu {
+    gap: 10px;
+  }
+
+  .candidateDashboardSidebarMenu li {
+    padding: 13px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .candidateDashboardSidebarBottom {
+    padding-top: 16px;
+  }
+
+  .candidateDashboardAdminAvatar {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .candidateDashboardAdminProfile h4 {
+    font-size: 14px;
+  }
+
+  .candidateDashboardAdminProfile p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .candidateDashboardHamburger {
+    margin: 12px 0 12px 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .candidateDashboardSidebar {
+    width: 250px;
+    left: -260px;
+    padding-top: 88px;
+  }
+
+  .candidateDashboardSidebar.showSidebar {
+    left: 0;
+  }
+
+  .candidateDashboardLogoIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .candidateDashboardLogoText {
+    font-size: 15px;
+  }
+
+  .candidateDashboardLogoSubtext {
+    font-size: 11px;
+  }
+
+  .candidateDashboardSidebarMenu li {
+    padding: 12px;
+    font-size: 13px;
+    gap: 12px;
+  }
+
+  .candidateDashboardAdminAvatar {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .candidateDashboardAdminProfile h4 {
+    font-size: 13px;
+  }
+
+  .candidateDashboardAdminProfile p {
+    font-size: 11px;
+  }
+}

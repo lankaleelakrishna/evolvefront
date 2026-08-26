@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    overflow-x: hidden;
+}
+
+.myapp-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+    padding: 28px 0;
+}
+
+.myapp-layout {
+    width: 92%;
+    margin: auto;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.myapp-sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 20px 16px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e7edf7;
+    position: sticky;
+    top: 100px;
+}
+
+.myapp-sidebar-header {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #fff;
+    border-radius: 18px;
+    padding: 22px 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.myapp-sidebar-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.myapp-sidebar-header h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.myapp-sidebar-header p {
+    font-size: 13px;
+    opacity: 0.95;
+}
+
+.myapp-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myapp-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #334155;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.myapp-sidebar-item:hover {
+    background: #eef4ff;
+    color: #2563eb;
+    transform: translateX(4px);
+}
+
+.myapp-sidebar-item.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.18);
+}
+
+.myapp-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.myapp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.myapp-title {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.myapp-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.myapp-browse-btn {
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.myapp-browse-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(37, 99, 235, 0.22);
+}
+
+.myapp-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.myapp-stat-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    border: 1px solid #e9eef7;
+}
+
+.myapp-stat-card h3 {
+    font-size: 28px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.myapp-stat-card p {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.pending-card {
+    border-left: 5px solid #f59e0b;
+}
+
+.accepted-card {
+    border-left: 5px solid #16a34a;
+}
+
+.rejected-card {
+    border-left: 5px solid #dc2626;
+}
+
+.myapp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.myapp-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e8eef8;
+    transition: 0.3s;
+}
+
+.myapp-card:hover {
+    transform: translateY(-4px);
+}
+
+.myapp-card-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+    min-width: 0;
+}
+
+.myapp-company-logo {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    background: #f8fbff;
+    border: 1px solid #edf2f7;
+    border-radius: 14px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.myapp-info h2 {
+    margin-bottom: 8px;
+    font-size: 21px;
+    color: #0f172a;
+}
+
+.company {
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.myapp-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.myapp-meta span {
+    background: #f8fbff;
+    border: 1px solid #e5edf8;
+    color: #475569;
+    font-size: 12px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.myapp-status-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.status {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status.pending {
+    background: #fff4d6;
+    color: #c78c00;
+}
+
+.status.accepted {
+    background: #e6f8ec;
+    color: #1e8e3e;
+}
+
+.status.rejected {
+    background: #fde8e8;
+    color: #d93025;
+}
+
+.myapp-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn,
+.details-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.view-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.view-btn:hover {
+    background: #1d4ed8;
+}
+
+.details-btn {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+.details-btn:hover {
+    background: #dbeafe;
+}
+
+@media (max-width: 1200px) {
+    .myapp-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .myapp-layout {
+        flex-direction: column;
+    }
+
+    .myapp-sidebar {
+        width: 100%;
+        min-width: 100%;
+        position: static;
+    }
+
+    .myapp-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .myapp-status-section {
+        width: 100%;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .myapp-layout {
+        width: 94%;
+    }
+
+    .myapp-title {
+        font-size: 26px;
+    }
+
+    .myapp-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .myapp-card-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .myapp-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .view-btn,
+    .details-btn,
+    .myapp-browse-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .myapp-page {
+        padding: 18px 0;
+    }
+
+    .myapp-layout {
+        width: 95%;
+        gap: 16px;
+    }
+
+    .myapp-sidebar,
+    .myapp-card,
+    .myapp-stat-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .myapp-company-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .myapp-info h2 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,638 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+.candidateDashboardLayout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+.candidateDashboardSidebar {
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.candidateDashboardSidebarTop {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.candidateDashboardLogoBox {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 6px;
+}
+
+.candidateDashboardLogoIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.candidateDashboardLogoText {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.candidateDashboardLogoSubtext {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+.candidateDashboardSidebarMenu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.candidateDashboardSidebarMenu li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 16px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #dbeafe;
+    transition: all 0.3s ease;
+}
+
+.candidateDashboardSidebarMenu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.candidateDashboardSidebarMenu li.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+}
+
+.candidateDashboardSidebarBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 20px;
+}
+
+.candidateDashboardAdminProfile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.candidateDashboardAdminAvatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.candidateDashboardAdminProfile h4 {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.candidateDashboardAdminProfile p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+.candidateDashboardMainContent {
+    margin-left: 290px;
+    width: calc(100% - 290px);
+    min-height: 100vh;
+    padding: 28px;
+}
+
+.candidateDashboardTopbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardTopbar h1 {
+    font-size: 30px;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.candidateDashboardTopbar p {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+.candidateDashboardTopbarRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardIconBtn,
+.candidateDashboardDateBtn {
+    border: none;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.candidateDashboardIconBtn:hover,
+.candidateDashboardDateBtn:hover {
+    background: #eff6ff;
+}
+
+.candidateDashboardCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.candidateDashboardSummaryCard {
+    border-radius: 18px;
+    padding: 22px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.candidateDashboardSummaryCard h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.candidateDashboardSummaryCard h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.candidateDashboardSummaryCard p {
+    font-size: 13px;
+}
+
+.blueCard {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.purpleCard {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.greenCard {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.orangeCard {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.candidateDashboardSections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.candidateDashboardSectionCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.candidateDashboardSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.candidateDashboardSectionCount {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.candidateDashboardFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.candidateDashboardFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.candidateDashboardFormGroup label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.candidateDashboardFormGroup input,
+.candidateDashboardFormGroup textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    color: #111827;
+    background: #ffffff;
+}
+
+.candidateDashboardFormGroup input:focus,
+.candidateDashboardFormGroup textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.candidateDashboardButtonRow {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.saveBtn,
+.bookmarkBtn,
+.removeBookmarkBtn,
+.applyBtn {
+    border: none;
+    padding: 11px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.saveBtn {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+}
+
+.bookmarkBtn {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.removeBookmarkBtn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.applyBtn {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.applyBtn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.candidateDashboardResumeBox {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.candidateDashboardUploadLabel {
+    width: 260px;
+    min-height: 130px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2563eb;
+    background: #f8fbff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.candidateDashboardUploadLabel svg {
+    font-size: 34px;
+}
+
+.candidateDashboardResumePreview {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.candidateDashboardResumePreview h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.candidateDashboardResumePreview p {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.candidateDashboardResumePreview span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.candidateDashboardFilterGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.candidateDashboardFilterItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.candidateDashboardFilterItem label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.candidateDashboardInputIcon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 0 14px;
+    background: #ffffff;
+}
+
+.candidateDashboardInputIcon svg {
+    color: #6b7280;
+}
+
+.candidateDashboardInputIcon input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 13px 0;
+    font-size: 14px;
+    color: #111827;
+    background: transparent;
+}
+
+.candidateDashboardJobList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.candidateDashboardJobCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardJobInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.candidateDashboardJobInfo h3 {
+    font-size: 18px;
+    color: #111827;
+}
+
+.candidateDashboardJobInfo p {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.candidateDashboardJobInfo span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.candidateDashboardJobInfo small {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #9ca3af;
+    max-width: 700px;
+}
+
+.candidateDashboardSkillsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skillTag {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.candidateDashboardJobActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.candidateDashboardTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.candidateDashboardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.candidateDashboardTable thead {
+    background: #f8fafc;
+}
+
+.candidateDashboardTable th,
+.candidateDashboardTable td {
+    text-align: left;
+    padding: 16px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.candidateDashboardTable th {
+    color: #374151;
+    font-weight: 700;
+}
+
+.candidateDashboardTable td {
+    color: #6b7280;
+}
+
+.statusBadge {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.appliedStatus {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.reviewStatus {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.shortlistedStatus {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.candidateDashboardEmptyState,
+.candidateDashboardEmptyTable {
+    text-align: center;
+    color: #9ca3af;
+    font-weight: 600;
+    padding: 24px;
+}
+
+@media (max-width: 1200px) {
+    .candidateDashboardCardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .candidateDashboardSidebar {
+        width: 250px;
+    }
+
+    .candidateDashboardMainContent {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .candidateDashboardFormGrid,
+    .candidateDashboardFilterGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .candidateDashboardLayout {
+        flex-direction: column;
+    }
+
+    .candidateDashboardSidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .candidateDashboardMainContent {
+        margin-left: 0;
+        width: 100%;
+        padding: 18px;
+    }
+
+    .candidateDashboardCardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .candidateDashboardTopbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .candidateDashboardTopbarRight {
+        width: 100%;
+    }
+
+    .candidateDashboardUploadLabel {
+        width: 100%;
+    }
+}

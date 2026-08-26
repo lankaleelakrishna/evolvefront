@@ -1,0 +1,89 @@
+.adminSectionCard {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.adminSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.adminSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.adminAnalyticsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.adminAnalyticsBox {
+    background: linear-gradient(135deg, #eff6ff, #eef2ff);
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid #dbeafe;
+    transition: all 0.3s ease;
+}
+
+.adminAnalyticsBox:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.08);
+}
+
+.adminAnalyticsBox h3 {
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.adminAnalyticsBox h2 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.adminAnalyticsBox p {
+    font-size: 13px;
+    color: #16a34a;
+    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .adminAnalyticsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .adminAnalyticsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .adminSectionCard {
+        padding: 18px;
+    }
+
+    .adminSectionHeader h2 {
+        font-size: 20px;
+    }
+
+    .adminAnalyticsBox {
+        padding: 18px;
+    }
+
+    .adminAnalyticsBox h2 {
+        font-size: 26px;
+    }
+}

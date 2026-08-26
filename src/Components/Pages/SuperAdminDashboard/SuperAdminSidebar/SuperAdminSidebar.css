@@ -1,0 +1,226 @@
+.superAdminSidebar {
+  width: 280px;
+  min-width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 82px;
+  background: #1e3a8a;
+  color: #ffffff;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: left 0.3s ease;
+}
+
+.superAdminSidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.superAdminBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.superAdminBrandIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.superAdminBrand h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.superAdminBrand p {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.superAdminCloseBtn {
+  display: none;
+  border: none;
+  background: #ffffff;
+  color: #1e3a8a;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.superAdminSidebarMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.superAdminSidebarItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background: transparent;
+  color: #dbeafe;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.superAdminSidebarItem:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.superAdminSidebarItem.active {
+  background: #1929b8;
+  color: #ffffff;
+}
+
+.superAdminLogoutBtn {
+  width: 100%;
+  border: none;
+  background: #dc2626;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.superAdminSidebarOverlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .superAdminSidebar {
+    width: 270px;
+    min-width: 270px;
+    left: -280px;
+    top: 0;
+    height: 100vh;
+    padding: 90px 16px 20px;
+    z-index: 5000;
+    overflow-y: auto;
+  }
+
+  .superAdminSidebar.open {
+    left: 0;
+  }
+
+  .superAdminCloseBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .superAdminSidebarOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 4999;
+  }
+
+  .superAdminSidebarOverlay.show {
+    display: block;
+  }
+
+  .superAdminBrandIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .superAdminBrand h2 {
+    font-size: 18px;
+  }
+
+  .superAdminSidebarItem {
+    padding: 13px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .superAdminSidebar {
+    width: 270px;
+    min-width: 270px;
+    left: -280px;
+  }
+
+  .superAdminBrand h2 {
+    font-size: 17px;
+  }
+
+  .superAdminBrand p {
+    font-size: 12px;
+  }
+
+  .superAdminLogoutBtn {
+    padding: 13px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .superAdminSidebar {
+    width: 250px;
+    min-width: 250px;
+    left: -260px;
+    padding: 88px 14px 18px;
+  }
+
+  .superAdminSidebar.open {
+    left: 0;
+  }
+
+  .superAdminBrandIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .superAdminBrand h2 {
+    font-size: 15px;
+  }
+
+  .superAdminBrand p {
+    font-size: 11px;
+  }
+
+  .superAdminCloseBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .superAdminSidebarItem {
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+
+  .superAdminLogoutBtn {
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+}

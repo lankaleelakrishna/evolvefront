@@ -1,0 +1,287 @@
+.employeeDashboardSidebar {
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 82px;
+  left: 0;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.employeeDashboardSidebarTop {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.employeeDashboardLogoBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 6px;
+}
+
+.employeeDashboardLogoIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.employeeDashboardCompanyLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.employeeDashboardDefaultLogo {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.employeeDashboardLogoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.employeeDashboardLogoSubtext {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.employeeDashboardSidebarMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employeeDashboardSidebarMenu li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #dbeafe;
+  transition: all 0.3s ease;
+}
+
+.employeeDashboardSidebarMenu li:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.employeeDashboardSidebarMenu li.active {
+  background: #0c5fc4;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.25);
+}
+
+.employeeDashboardSidebarBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 20px;
+}
+
+.employeeDashboardAdminProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.employeeDashboardAdminAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.employeeDashboardAdminProfile h4 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.employeeDashboardAdminProfile p {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.employeeDashboardHamburger {
+  display: none;
+}
+
+.employeeDashboardSidebarOverlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .employeeDashboardSidebar {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .employeeDashboardHamburger {
+    display: flex;
+    position: relative;
+    margin: 14px 0 14px 14px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 6000;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  }
+
+  .employeeDashboardSidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 270px;
+    height: 100vh;
+    padding: 90px 16px 20px;
+    background: #1e3a8a;
+    overflow-y: auto;
+    z-index: 5000;
+  }
+
+  .employeeDashboardSidebar.showSidebar {
+    left: 0;
+  }
+
+  .employeeDashboardSidebarOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 4999;
+  }
+
+  .employeeDashboardSidebarOverlay.show {
+    display: block;
+  }
+
+  .employeeDashboardLogoIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .employeeDashboardLogoText {
+    font-size: 17px;
+  }
+
+  .employeeDashboardLogoSubtext {
+    font-size: 12px;
+  }
+
+  .employeeDashboardSidebarMenu li {
+    padding: 13px 14px;
+    font-size: 14px;
+  }
+
+  .employeeDashboardAdminAvatar {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .employeeDashboardAdminProfile h4 {
+    font-size: 14px;
+  }
+
+  .employeeDashboardAdminProfile p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employeeDashboardHamburger {
+    margin: 12px 0 12px 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .employeeDashboardSidebar {
+    width: 250px;
+    left: -260px;
+    padding-top: 88px;
+  }
+
+  .employeeDashboardSidebar.showSidebar {
+    left: 0;
+  }
+
+  .employeeDashboardLogoIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .employeeDashboardDefaultLogo {
+    font-size: 16px;
+  }
+
+  .employeeDashboardLogoText {
+    font-size: 15px;
+  }
+
+  .employeeDashboardLogoSubtext {
+    font-size: 11px;
+  }
+
+  .employeeDashboardSidebarMenu li {
+    padding: 12px;
+    font-size: 13px;
+    gap: 12px;
+  }
+
+  .employeeDashboardAdminAvatar {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .employeeDashboardAdminProfile h4 {
+    font-size: 13px;
+  }
+
+  .employeeDashboardAdminProfile p {
+    font-size: 11px;
+  }
+}

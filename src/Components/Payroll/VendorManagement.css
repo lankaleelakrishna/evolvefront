@@ -1,0 +1,255 @@
+.vendor-management-page {
+  padding: 24px;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.vendor-header h2 {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 26px;
+}
+
+.vendor-header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.add-vendor-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vendor-form-card,
+.vendor-table-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  margin-bottom: 24px;
+}
+
+.vendor-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-form-header h3 {
+  margin: 0 0 18px;
+  color: #1e293b;
+}
+
+.vendor-form-header button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.vendor-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.vendor-form input,
+.vendor-form select,
+.vendor-form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.vendor-form textarea {
+  grid-column: span 2;
+  min-height: 90px;
+  resize: vertical;
+}
+
+.vendor-form button {
+  grid-column: span 2;
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vendor-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vendor-table-card th {
+  background: #eff6ff;
+  color: #1e3a8a;
+  text-align: left;
+  padding: 14px;
+  font-size: 14px;
+}
+
+.vendor-table-card td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.vendor-status {
+  background: #dcfce7;
+  color: #166534;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: #64748b;
+  padding: 30px !important;
+}
+
+@media (max-width: 768px) {
+  .vendor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .vendor-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-form textarea,
+  .vendor-form button {
+    grid-column: span 1;
+  }
+
+  .vendor-table-card {
+    overflow-x: auto;
+  }
+}
+
+.assign-job-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.assign-job-btn:hover {
+  background: #1e40af;
+}
+
+.vendor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.vendor-assign-modal {
+  width: 100%;
+  max-width: 620px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.28);
+}
+
+.vendor-assign-modal .vendor-form {
+  margin-top: 18px;
+}
+
+.vendor-form-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.vendor-assign-modal select,
+.vendor-assign-modal input {
+  grid-column: span 2;
+}
+
+
+.vendor-action-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.view-candidates-btn {
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.view-candidates-btn:hover {
+  background: #115e59;
+}
+
+.vendor-candidates-modal {
+  width: 95%;
+  max-width: 1150px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.28);
+}
+
+.vendor-candidates-table-wrap {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.candidate-status-select {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .vendor-assign-modal select,
+  .vendor-assign-modal input {
+    grid-column: span 1;
+  }
+}

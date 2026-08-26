@@ -1,0 +1,301 @@
+.manageAdminsCard {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 26px;
+    border: 1px solid #e7edf5;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+.manageAdminsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.manageAdminsHeader h2 {
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.manageAdminsActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.manageAdminsSearchInput,
+.manageAdminsForm input,
+.manageAdminsForm select {
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    outline: none;
+    font-size: 14px;
+    background: #ffffff;
+    color: #0f172a;
+    transition: all 0.3s ease;
+}
+
+.manageAdminsSearchInput:focus,
+.manageAdminsForm input:focus,
+.manageAdminsForm select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.manageAdminsSearchInput {
+    min-width: 240px;
+    background: #f8fafc;
+}
+
+.manageAdminsPrimaryBtn,
+.manageAdminsSaveBtn,
+.manageAdminsCancelBtn,
+.manageAdminsEditBtn,
+.manageAdminsToggleBtn,
+.manageAdminsDeleteBtn {
+    border: none;
+    border-radius: 14px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.manageAdminsPrimaryBtn,
+.manageAdminsSaveBtn {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.manageAdminsPrimaryBtn:hover,
+.manageAdminsSaveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(37, 99, 235, 0.28);
+}
+
+.manageAdminsCancelBtn {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.manageAdminsCancelBtn:hover {
+    background: #cbd5e1;
+}
+
+.manageAdminsEditBtn {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.manageAdminsEditBtn:hover {
+    background: #bae6fd;
+}
+
+.manageAdminsToggleBtn {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.manageAdminsToggleBtn:hover {
+    background: #ddd6fe;
+}
+
+.manageAdminsDeleteBtn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.manageAdminsDeleteBtn:hover {
+    background: #fecaca;
+}
+
+.manageAdminsTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 1px solid #edf2f7;
+    background: #ffffff;
+}
+
+.manageAdminsTable {
+    width: 100%;
+    min-width: 920px;
+    border-collapse: collapse;
+}
+
+.manageAdminsTable thead tr {
+    background: linear-gradient(180deg, #f8fbff 0%, #f1f5f9 100%);
+}
+
+.manageAdminsTable th,
+.manageAdminsTable td {
+    padding: 16px 15px;
+    border-bottom: 1px solid #eef2f7;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.manageAdminsTable th {
+    color: #475569;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.manageAdminsTable td {
+    color: #0f172a;
+    background: #ffffff;
+}
+
+.manageAdminsTable tbody tr {
+    transition: background 0.3s ease;
+}
+
+.manageAdminsTable tbody tr:hover td {
+    background: #f8fbff;
+}
+
+.manageAdminsStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 88px;
+}
+
+.manageAdminsStatus.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.manageAdminsStatus.inactive {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.manageAdminsActionGroup,
+.manageAdminsFormActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.manageAdminsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.manageAdminsModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.58);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.manageAdminsModal {
+    width: 100%;
+    max-width: 540px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+    border: 1px solid #e7edf5;
+}
+
+.manageAdminsModalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.manageAdminsModalHeader h2 {
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.manageAdminsModalClose {
+    border: none;
+    background: #f1f5f9;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.manageAdminsModalClose:hover {
+    background: #e2e8f0;
+}
+
+.manageAdminsNoData {
+    text-align: center;
+    color: #64748b;
+    padding: 34px 0;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .manageAdminsCard {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .manageAdminsHeader h2 {
+        font-size: 20px;
+    }
+
+    .manageAdminsSearchInput {
+        min-width: 100%;
+    }
+
+    .manageAdminsActions {
+        width: 100%;
+    }
+
+    .manageAdminsActions>* {
+        width: 100%;
+    }
+
+    .manageAdminsPrimaryBtn {
+        justify-content: center;
+    }
+
+    .manageAdminsModal {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .manageAdminsFormActions {
+        flex-direction: column;
+    }
+
+    .manageAdminsFormActions>* {
+        width: 100%;
+    }
+}

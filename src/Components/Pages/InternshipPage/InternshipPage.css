@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.internship-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.intern-hero {
+  position: relative;
+  min-height: 340px;
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intern-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 58, 138, 0.82);
+}
+
+.intern-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.intern-hero h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.intern-hero p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.intern-search-box {
+  max-width: 580px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+}
+
+.intern-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.intern-search-box input::placeholder {
+  color: #6b7280;
+}
+
+.intern-search-box button {
+  border: none;
+  padding: 0 26px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.intern-search-box button:hover {
+  background: #1e40af;
+}
+
+.intern-stats-card {
+  position: relative;
+  z-index: 5;
+  max-width: 1000px;
+  margin: -60px auto 50px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+}
+
+.intern-stat-item {
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+}
+
+.intern-stat-item:last-child {
+  border-right: none;
+}
+
+.intern-stat-item h3 {
+  font-size: 28px;
+  color: #2563eb;
+  font-weight: 900;
+}
+
+.intern-stat-item p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.trusted-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.section-subtitle {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.trusted-section h2 {
+  font-size: 30px;
+  color: #1e3a8a;
+  margin: 10px 0 30px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.company-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  transition: 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(37, 99, 235, 0.14);
+}
+
+.company-card img {
+  width: 80px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.testimonial-section {
+  padding: 70px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.testimonial-box {
+  max-width: 650px;
+  margin: auto;
+  background: #ffffff;
+  padding: 38px;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.testimonial-text {
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.testimonial-box h4 {
+  color: #2563eb;
+}
+
+@media (max-width: 992px) {
+  .intern-hero h1 {
+    font-size: 32px;
+  }
+
+  .intern-stats-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .intern-hero {
+    padding: 45px 16px 90px;
+  }
+
+  .intern-search-box {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .intern-search-box button {
+    width: 100%;
+  }
+
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .intern-stats-card {
+    grid-template-columns: 1fr;
+  }
+
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intern-hero h1 {
+    font-size: 26px;
+  }
+}

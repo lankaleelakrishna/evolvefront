@@ -1,0 +1,98 @@
+.sidebar {
+  width: 260px;
+  background: #f7fafd;
+  border-radius: 10px;
+  padding: 18px 18px 0 18px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2d3a4a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.icon {
+  font-size: 1.7rem;
+  margin-right: 8px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.filters-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2d3a4a;
+}
+
+.filter-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eaf1fb;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-group:hover {
+  background: #dbeafe;
+}
+
+.arrow {
+  font-size: 1.1rem;
+  color: #2563eb;
+}
+
+.sub-section {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.sub-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #6b7280;
+}
+
+.sub-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 0.97rem;
+  cursor: pointer;
+  color: #2d3a4a;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sub-filter.active,
+.sub-filter:hover {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+
+.count {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.view-all {
+  margin-top: 8px;
+  color: #2563eb;
+  font-size: 0.97rem;
+  cursor: pointer;
+  font-weight: 500;
+}

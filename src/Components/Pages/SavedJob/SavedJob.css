@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.saved-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8fbff, #eef4ff);
+    padding: 24px 0;
+}
+
+.saved-layout {
+    width: 92%;
+    margin: auto;
+    display: flex;
+    gap: 24px;
+}
+
+/* CONTENT */
+.saved-content {
+    flex: 1;
+}
+
+.saved-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.saved-header h1 {
+    font-size: 28px;
+}
+
+.saved-header button {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* EMPTY STATE */
+.no-saved-box {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.no-saved-box button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CARDS */
+.saved-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.saved-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e6edf7;
+    transition: 0.3s;
+}
+
+.saved-card:hover {
+    transform: translateY(-3px);
+}
+
+/* LEFT */
+.saved-left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.saved-icon {
+    font-size: 30px;
+    background: #eef4ff;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.company {
+    color: #2563eb;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.meta span {
+    background: #f1f5f9;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* ACTIONS */
+.saved-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .saved-layout {
+        flex-direction: column;
+    }
+
+    .saved-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .saved-actions {
+        width: 100%;
+    }
+
+    .view-btn,
+    .remove-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,147 @@
+.candidateDashboardSectionCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.candidateDashboardSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.candidateDashboardResumeBox {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.candidateDashboardUploadLabel {
+    width: 260px;
+    min-height: 130px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2563eb;
+    background: #f8fbff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.candidateDashboardUploadLabel:hover {
+    background: #eef6ff;
+    border-color: #2563eb;
+}
+
+.candidateDashboardUploadLabel svg {
+    font-size: 34px;
+}
+
+.candidateDashboardResumePreview {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.candidateDashboardResumePreview h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.candidateDashboardResumePreview p {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.candidateDashboardResumePreview span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.candidateDashboardResumeBoxRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardPhotoPreview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+.candidateDashboardSaveBtnWrap {
+    margin-top: 20px;
+}
+
+.candidateDashboardSaveBtn {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+}
+
+.candidateDashboardSaveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+
+.candidateDashboardSaveBtn:active {
+    transform: scale(0.98);
+}
+
+.candidateDashboardResumePreview button{
+   color: blue;
+   text-decoration: underline;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .candidateDashboardUploadLabel {
+        width: 100%;
+    }
+
+    .candidateDashboardResumeBoxRow {
+        flex-direction: column;
+    }
+
+    .candidateDashboardPhotoPreview {
+        width: 100px;
+        height: 100px;
+    }
+}

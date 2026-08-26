@@ -1,0 +1,214 @@
+.CandidatelayoutSectionCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.CandidatelayoutSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.CandidatelayoutSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.CandidatelayoutFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.CandidatelayoutFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.CandidatelayoutFormGroup label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.CandidatelayoutFormGroup input,
+.CandidatelayoutFormGroup textarea,
+.CandidatelayoutFormGroup select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    background: #f9fafb;
+    transition: 0.2s ease;
+}
+
+.CandidatelayoutFormGroup input:focus,
+.CandidatelayoutFormGroup textarea:focus,
+.CandidatelayoutFormGroup select:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.CandidatelayoutFormGroup textarea {
+    resize: vertical;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.candidateProfileUploadSection {
+    margin-top: 4px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+}
+
+.candidateProfileUploadSection h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.candidateDashboardResumeBoxRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.candidateDashboardResumeBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.candidateDashboardUploadLabel {
+    width: 260px;
+    min-height: 130px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2563eb;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.candidateDashboardUploadLabel:hover {
+    background: #eef6ff;
+    border-color: #2563eb;
+}
+
+.candidateDashboardUploadLabel svg {
+    font-size: 34px;
+}
+
+.candidateDashboardResumePreview {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.candidateDashboardResumePreview h3 {
+    font-size: 16px;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.candidateDashboardResumePreview p {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.candidateDashboardResumePreview span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.candidateDashboardResumePreview button {
+    color: #2563eb;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.candidateDashboardPhotoPreview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+.CandidatelayoutButtonRow {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.CandidatelayoutSaveBtn {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.CandidatelayoutSaveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+@media (max-width: 768px) {
+    .CandidatelayoutFormGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: auto;
+    }
+
+    .candidateDashboardResumeBoxRow {
+        flex-direction: column;
+    }
+
+    .candidateDashboardUploadLabel {
+        width: 100%;
+    }
+
+    .candidateDashboardPhotoPreview {
+        width: 100px;
+        height: 100px;
+    }
+}

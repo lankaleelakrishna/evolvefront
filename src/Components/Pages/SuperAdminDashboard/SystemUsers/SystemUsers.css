@@ -1,0 +1,122 @@
+.systemUsersCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.systemUsersHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.systemUsersHeader h2 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.systemUsersSearchInput {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    min-width: 220px;
+}
+
+.systemUsersTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.systemUsersTable {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+}
+
+.systemUsersTable th,
+.systemUsersTable td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #eef2f7;
+    text-align: left;
+    font-size: 14px;
+}
+
+.systemUsersTable th {
+    background: #f8fafc;
+    color: #475569;
+}
+
+.systemUsersStatus {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.systemUsersStatus.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.systemUsersStatus.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.systemUsersStatus.blocked {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.systemUsersActionGroup {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.systemUsersApproveBtn,
+.systemUsersPendingBtn,
+.systemUsersBlockBtn {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.systemUsersApproveBtn {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.systemUsersPendingBtn {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.systemUsersBlockBtn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.systemUsersNoData {
+    text-align: center;
+    color: #64748b;
+    padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .systemUsersSearchInput {
+        min-width: 100%;
+    }
+}

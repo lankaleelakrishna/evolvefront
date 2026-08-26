@@ -1,0 +1,342 @@
+.intern-details-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f4f8ff 0%, #f8fafc 45%, #ffffff 100%);
+    padding: 50px 20px;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+ 
+.intern-details-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(310px, 1fr);
+    gap: 26px;
+    align-items: start;
+}
+ 
+ 
+.intern-details-top-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+ 
+.intern-details-top-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 6px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+ 
+.intern-details-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+ 
+.intern-details-logo {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    flex-shrink: 0;
+}
+ 
+.intern-details-main-info {
+    flex: 1;
+}
+ 
+.intern-details-main-info h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+ 
+.intern-details-company {
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 6px 0;
+}
+ 
+.intern-details-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+}
+ 
+.tag {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    border: 1px solid #dbeafe;
+}
+ 
+.intern-details-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    font-size: 14px;
+}
+ 
+.salary,
+.location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+ 
+.salary {
+    color: #2563eb;
+    background: #eff6ff;
+}
+ 
+.location {
+    color: #475569;
+    background: #f1f5f9;
+}
+ 
+.intern-details-action {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+ 
+.intern-apply-btn {
+    padding: 13px 24px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 14px 26px rgba(37, 99, 235, 0.24);
+    transition: all 0.3s ease;
+}
+ 
+.intern-apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(37, 99, 235, 0.32);
+}
+ 
+.intern-details-card {
+    background: #ffffff;
+    margin-top: 18px;
+    padding: 24px;
+    border-radius: 22px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+ 
+.intern-details-card h2,
+.intern-overview-card h3,
+.intern-related-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 14px;
+}
+ 
+.intern-details-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #475569;
+}
+ 
+.intern-details-card ul {
+    padding-left: 18px;
+    margin-top: 10px;
+}
+ 
+.intern-details-card li {
+    margin-bottom: 10px;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 15px;
+}
+ 
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ 
+.skills-list span {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid #e2e8f0;
+}
+ 
+.intern-details-right {
+    position: sticky;
+    top: 90px;
+}
+ 
+.intern-overview-card,
+.intern-related-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+ 
+.intern-related-card {
+    margin-top: 18px;
+}
+ 
+.overview-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 12px;
+    border-radius: 14px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.overview-item svg {
+    color: #2563eb;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+ 
+.posted {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+}
+.intern-related-job {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+ 
+.intern-related-job:hover {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateX(4px);
+}
+ 
+.intern-related-job img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 7px;
+    border: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+ 
+.intern-related-job h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+ 
+.intern-related-job p {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+}
+ 
+@media (max-width: 992px) {
+    .intern-details-wrapper {
+        grid-template-columns: 1fr;
+    }
+ 
+    .intern-details-right {
+        position: static;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .intern-details-page {
+        padding: 30px 14px;
+    }
+ 
+    .intern-details-top-card,
+    .intern-details-card,
+    .intern-overview-card,
+    .intern-related-card {
+        border-radius: 18px;
+        padding: 20px;
+    }
+ 
+    .intern-details-header {
+        flex-direction: column;
+    }
+ 
+    .intern-details-main-info h1 {
+        font-size: 24px;
+    }
+ 
+    .intern-details-action {
+        margin-left: 0;
+        width: 100%;
+    }
+ 
+    .intern-apply-btn {
+        width: 100%;
+    }
+ 
+    .intern-details-meta {
+        flex-direction: column;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .intern-details-main-info h1 {
+        font-size: 21px;
+    }
+ 
+    .intern-details-logo {
+        width: 64px;
+        height: 64px;
+    }
+ 
+    .intern-details-card h2,
+    .intern-overview-card h3,
+    .intern-related-card h3 {
+        font-size: 18px;
+    }
+}
+ 

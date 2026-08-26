@@ -1,0 +1,122 @@
+.adminSectionCard {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.adminSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.adminSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.adminSectionCount {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.adminJobList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.adminJobItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+
+.adminJobInfo h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.adminJobInfo p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.adminJobInfo span {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.adminJobInfo strong {
+    color: #111827;
+}
+
+.adminJobInfo small {
+    display: block;
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.adminCompanyActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.rejectBtn {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.adminNoCardData {
+    text-align: center;
+    background: #f8fafc;
+    color: #6b7280;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px dashed #cbd5e1;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .adminSectionCard {
+        padding: 18px;
+    }
+
+    .adminJobItem {
+        align-items: flex-start;
+    }
+
+    .adminSectionHeader h2 {
+        font-size: 20px;
+    }
+}

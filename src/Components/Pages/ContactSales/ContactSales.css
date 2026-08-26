@@ -1,0 +1,681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contactSalesPage {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #111827;
+}
+
+
+.contactSalesHero {
+    width: 100%;
+    padding: 80px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(96, 165, 250, 0.35), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(79, 70, 229, 0.35), transparent 28%),
+        linear-gradient(135deg, #0f172a, #1e3a8a);
+    position: relative;
+    overflow: hidden;
+}
+
+.contactSalesHero::after {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: -120px;
+    bottom: -120px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.contactSalesHeroContent {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.salesLabel {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #dbeafe;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+}
+
+.contactSalesHeroContent h1 {
+    font-size: 54px;
+    line-height: 1.12;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1.2px;
+}
+
+.contactSalesHeroContent h1 span {
+    color: #60a5fa;
+}
+
+.contactSalesHeroContent p {
+    max-width: 620px;
+    color: #dbeafe;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.heroStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 34px;
+}
+
+.heroStatCard {
+    padding: 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroStatCard h3 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.heroStatCard p {
+    font-size: 13px;
+    color: #bfdbfe;
+    line-height: 1.4;
+}
+
+/* FORM */
+.contactSalesFormCard {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 34px;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.formHeader {
+    margin-bottom: 24px;
+}
+
+.formHeader span {
+    display: inline-block;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.formHeader h2 {
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.formHeader p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.successMessage {
+    padding: 13px 15px;
+    border-radius: 14px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 13px;
+    color: #334155;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    background: #f8fafc;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.formGroup textarea {
+    min-height: 110px;
+    resize: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.formGroup small {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.salesSubmitBtn {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.3);
+    transition: 0.3s ease;
+}
+
+.salesSubmitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 38px rgba(37, 99, 235, 0.38);
+}
+
+.sectionTitle {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.sectionTitle span {
+    display: inline-block;
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.sectionTitle h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #0f172a;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.sectionTitle p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.salesBenefitsSection {
+    padding: 78px 7%;
+    background: #f8fafc;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.benefitCard {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 28px;
+    border-radius: 26px;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+    transition: 0.3s ease;
+}
+
+.benefitCard:hover {
+    transform: translateY(-8px);
+    border-color: #bfdbfe;
+    box-shadow: 0 22px 48px rgba(37, 99, 235, 0.12);
+}
+
+.benefitIcon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.benefitCard h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.benefitCard p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.pricingSection {
+    padding: 78px 7%;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.09), transparent 30%),
+        #ffffff;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.pricingCard {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    padding: 34px;
+    box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.pricingCard::before {
+    content: "";
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.pricingCard:hover {
+    transform: translateY(-8px);
+    border-color: #bfdbfe;
+    box-shadow: 0 26px 60px rgba(37, 99, 235, 0.16);
+}
+
+.pricingCard.selectedPlan {
+    border: 2px solid #2563eb;
+}
+
+.pricingCard.popularPlan {
+    background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.pricingCard h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.planDescription {
+    position: relative;
+    z-index: 1;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 46px;
+    margin-bottom: 22px;
+}
+
+.planPrice {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.planPrice h2 {
+    font-size: 44px;
+    font-weight: 950;
+    color: #2563eb;
+    letter-spacing: -1px;
+}
+
+.planPrice span {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pricingCard ul {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.pricingCard li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #334155;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.pricingCard li::before {
+    content: "✓";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.pricingCard button {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    padding: 14px 18px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pricingCard.selectedPlan button,
+.pricingCard button:hover {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.25);
+}
+
+.faqSection {
+    padding: 78px 7%;
+    background: #f8fafc;
+}
+
+.faqList {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+}
+
+.faqItem {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 12px 34px rgba(15, 23, 42, 0.05);
+}
+
+.faqItem h4 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.faqItem p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+@media (max-width: 1200px) {
+    .contactSalesHeroContent h1 {
+        font-size: 46px;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .contactSalesHero {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricingCard {
+        max-width: 620px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactSalesHero {
+        padding: 45px 18px;
+    }
+
+    .contactSalesHeroContent h1 {
+        font-size: 34px;
+    }
+
+    .contactSalesHeroContent p {
+        font-size: 14px;
+    }
+
+    .heroStats {
+        grid-template-columns: 1fr;
+    }
+
+    .contactSalesFormCard {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .salesBenefitsSection,
+    .pricingSection,
+    .faqSection {
+        padding: 55px 18px;
+    }
+
+    .sectionTitle h2 {
+        font-size: 28px;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .planPrice h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactSalesHeroContent h1 {
+        font-size: 29px;
+    }
+
+    .salesLabel {
+        font-size: 11px;
+    }
+
+    .formHeader h2 {
+        font-size: 24px;
+    }
+
+    .pricingCard {
+        padding: 26px 22px;
+    }
+
+    .popularBadge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+}
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.formActions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+}
+
+.resetBtn {
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 16px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.resetBtn:hover {
+    background: #e2e8f0;
+}
+
+.submittedPreview {
+    padding: 50px 7%;
+    background: #ffffff;
+}
+
+.submittedPreview h2 {
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.previewGrid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    padding: 24px;
+}
+
+.previewGrid p {
+    font-size: 14px;
+    color: #334155;
+}
+
+.faqItem button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.faqItem button span {
+    font-size: 28px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .formActions {
+        grid-template-columns: 1fr;
+    }
+
+    .previewGrid {
+        grid-template-columns: 1fr;
+    }
+}

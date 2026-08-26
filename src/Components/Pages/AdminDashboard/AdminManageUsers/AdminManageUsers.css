@@ -1,0 +1,242 @@
+.adminSectionCard {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #edf0f5;
+}
+
+.adminSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.adminSectionHeader h2 {
+    font-size: 22px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.adminSectionSubText {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.adminHeaderActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* DOWNLOAD DROPDOWN */
+
+.downloadDropdownWrapper {
+    position: relative;
+}
+
+.downloadMainBtn {
+    border: none;
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 18px rgba(22, 163, 74, 0.25);
+    transition: all 0.3s ease;
+}
+
+.downloadMainBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(22, 163, 74, 0.32);
+}
+
+.downloadArrow {
+    font-size: 11px;
+}
+
+.downloadDropdownMenu {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 200px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+    z-index: 100;
+    animation: fadeDropdown 0.2s ease;
+}
+
+.downloadDropdownMenu button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 12px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    transition: all 0.2s ease;
+}
+
+.downloadDropdownMenu button:hover {
+    background: #f3f4f6;
+}
+
+.downloadDropdownMenu button:first-child svg {
+    color: #16a34a;
+}
+
+.downloadDropdownMenu button:last-child svg {
+    color: #dc2626;
+}
+
+@keyframes fadeDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adminSectionCount {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.adminTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.adminTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.adminTable thead {
+    background: #f8fafc;
+}
+
+.adminTable th,
+.adminTable td {
+    text-align: left;
+    padding: 16px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.adminTable th {
+    color: #374151;
+    font-weight: 700;
+}
+
+.adminTable td {
+    color: #6b7280;
+}
+
+.adminStatus {
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.activeStatus {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.blockedStatus {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.adminActionBtns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.approveBtn,
+.rejectBtn,
+.deleteBtn {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.approveBtn {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.deleteBtn,
+.rejectBtn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.adminEmptyState {
+    text-align: center;
+    padding: 30px 0;
+    color: #9ca3af;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .adminSectionCard {
+        padding: 18px;
+    }
+
+    .adminSectionHeader {
+        align-items: flex-start;
+    }
+
+    .adminHeaderActions {
+        width: 100%;
+    }
+
+    .downloadMainBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .downloadDropdownWrapper {
+        width: 100%;
+    }
+
+    .downloadDropdownMenu {
+        width: 100%;
+    }
+}

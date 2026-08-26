@@ -1,0 +1,76 @@
+.systemSettingsGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.systemSettingsCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.systemSettingsHeader {
+    margin-bottom: 18px;
+}
+
+.systemSettingsHeader h2 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.systemSettingsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.systemSettingsForm input,
+.systemSettingsForm select {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.systemSettingsFormActions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.systemSettingsSaveBtn {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+}
+
+.systemSettingsToggleList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.systemSettingsToggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 14px;
+    color: #334155;
+}
+
+@media (max-width: 992px) {
+    .systemSettingsGrid {
+        grid-template-columns: 1fr;
+    }
+}

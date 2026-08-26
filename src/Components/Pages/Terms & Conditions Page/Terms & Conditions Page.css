@@ -1,0 +1,304 @@
+.termsPage {
+    min-height: 100vh;
+    background: #f4f7fb;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #111827;
+}
+
+.termsHero {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    padding: 80px 20px 120px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.termsHero::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    top: -120px;
+    left: -80px;
+}
+
+.termsHero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    right: -70px;
+    bottom: -90px;
+}
+
+.termsHeroBadge {
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 9px 18px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.termsHero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.termsHero p {
+    max-width: 680px;
+    margin: 0 auto 16px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #eef2ff;
+    position: relative;
+    z-index: 2;
+}
+
+.termsHero span {
+    display: inline-block;
+    font-size: 14px;
+    color: #dbeafe;
+    position: relative;
+    z-index: 2;
+}
+
+.termsContainer {
+    max-width: 1100px;
+    margin: -70px auto 0;
+    padding: 0 20px 60px;
+    position: relative;
+    z-index: 5;
+}
+
+.termsIntroCard {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 26px;
+}
+
+.termsIntroCard h2 {
+    font-size: 26px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.termsIntroCard p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+.termsCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.termsCard {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 26px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    transition: 0.3s ease;
+}
+
+.termsCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.18);
+}
+
+.termsIcon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.termsCard h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.termsCard p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6b7280;
+}
+
+.termsContent {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.termsContent section {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.termsContent section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.termsContent h2 {
+    font-size: 21px;
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.termsContent p {
+    font-size: 15.5px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.termsContent ul {
+    padding-left: 22px;
+    margin-top: 10px;
+}
+
+.termsContent li {
+    font-size: 15.5px;
+    color: #4b5563;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.termsAgreementBox,
+.termsContactBox {
+    margin-top: 24px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 26px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.termsAgreementBox {
+    background: linear-gradient(135deg, #ecfdf5, #ffffff);
+    border-left: 5px solid #16a34a;
+}
+
+.termsContactBox {
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    border-left: 5px solid #2563eb;
+}
+
+.termsAgreementBox svg,
+.termsContactBox svg {
+    font-size: 26px;
+    color: #2563eb;
+    margin-top: 4px;
+}
+
+.termsAgreementBox svg {
+    color: #16a34a;
+}
+
+.termsAgreementBox h3,
+.termsContactBox h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.termsAgreementBox p,
+.termsContactBox p {
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.termsContactBox a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.termsContactBox a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .termsCards {
+        grid-template-columns: 1fr;
+    }
+
+    .termsHero h1 {
+        font-size: 34px;
+    }
+
+    .termsContent,
+    .termsIntroCard {
+        padding: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .termsHero {
+        padding: 60px 16px 100px;
+    }
+
+    .termsHero h1 {
+        font-size: 28px;
+    }
+
+    .termsHero p {
+        font-size: 15px;
+    }
+
+    .termsContainer {
+        padding: 0 14px 40px;
+    }
+
+    .termsIntroCard,
+    .termsContent,
+    .termsAgreementBox,
+    .termsContactBox,
+    .termsCard {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .termsAgreementBox,
+    .termsContactBox {
+        flex-direction: column;
+    }
+}

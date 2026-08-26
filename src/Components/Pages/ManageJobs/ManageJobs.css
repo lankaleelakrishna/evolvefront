@@ -1,0 +1,252 @@
+.employeeDashboardSectionCard {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  border: 1px solid #edf0f5;
+  overflow: hidden;
+}
+
+.employeeDashboardSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.employeeDashboardSectionHeader h2 {
+  font-size: 22px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.employeeDashboardSectionCount {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.employeeDashboardJobList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.employeeDashboardJobCard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.jobLogo {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.jobLogo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.employeeDashboardJobInfo {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.employeeDashboardJobInfo h3 {
+  font-size: 18px;
+  color: #111827;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+.employeeDashboardJobInfo p {
+  font-size: 14px;
+  color: #4b5563;
+  word-break: break-word;
+}
+
+.employeeDashboardJobInfo span {
+  font-size: 13px;
+  color: #6b7280;
+  word-break: break-word;
+}
+
+.employeeDashboardJobInfo small {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.45;
+  max-width: 700px;
+  word-break: break-word;
+}
+
+.employeeDashboardJobActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.editBtn,
+.deleteBtn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.editBtn {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.deleteBtn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.employeeDashboardEmptyState {
+  text-align: center;
+  color: #9ca3af;
+  font-weight: 600;
+  padding: 24px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .employeeDashboardSectionCard {
+    padding: 22px;
+  }
+
+  .employeeDashboardJobCard {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .employeeDashboardJobActions {
+    grid-column: 2;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .employeeDashboardSectionCard {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .employeeDashboardSectionHeader {
+    align-items: flex-start;
+  }
+
+  .employeeDashboardSectionHeader h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .employeeDashboardSectionCount {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .employeeDashboardJobCard {
+    grid-template-columns: 56px minmax(0, 1fr);
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .jobLogo,
+  .jobLogo img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .employeeDashboardJobInfo h3 {
+    font-size: 16px;
+  }
+
+  .employeeDashboardJobInfo p,
+  .employeeDashboardJobInfo span,
+  .employeeDashboardJobInfo small {
+    font-size: 12px;
+  }
+
+  .employeeDashboardJobActions {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .employeeDashboardSectionCard {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .employeeDashboardSectionHeader h2 {
+    font-size: 18px;
+  }
+
+  .employeeDashboardJobCard {
+    grid-template-columns: 48px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .jobLogo,
+  .jobLogo img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .employeeDashboardJobInfo h3 {
+    font-size: 15px;
+  }
+
+  .employeeDashboardJobActions {
+    flex-direction: column;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    width: 100%;
+  }
+}

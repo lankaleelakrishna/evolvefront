@@ -1,0 +1,240 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+
+.admin-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    padding: 12px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background: white;
+    border-radius: 6px;
+}
+
+
+.sidebar-users {
+    width: 240px;
+    background: #2e3bee;
+    color: white;
+    padding: 20px 10px;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.logo-texts {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.side-item {
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.side-item:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.side-item.active {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.manage-users {
+    flex: 1;
+    padding: 30px;
+    width: 100%;
+}
+
+.manage-users h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f5ff;
+}
+
+
+
+.av {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.status-blocked {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.block-btn {
+    background: red;
+    color: white;
+}
+
+.unblock-btn {
+    background: green;
+    color: white;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .admin-container {
+        flex-direction: column;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+
+    .sidebar-users {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 260px;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .sidebar-users.open {
+        left: 0;
+    }
+
+    .manage-users {
+        padding: 15px;
+        margin-top: 50px;
+    }
+
+    table {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .manage-users h2 {
+        font-size: 18px;
+    }
+
+    table {
+        min-width: 280px;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}

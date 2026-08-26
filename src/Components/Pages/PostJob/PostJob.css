@@ -1,0 +1,250 @@
+.postjob-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.82), rgba(30, 58, 138, 0.72)),
+        url("../../../assets/img.5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.postjob-container {
+    width: 80%;
+    max-width: 750px;
+    padding: 42px;
+    margin: 0 auto;
+    margin-left: 320px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    border: 1px solid rgba(229, 231, 235, 0.9);
+    box-shadow: 0 24px 60px rgba(30, 58, 138, 0.22);
+}
+
+.postjob-container h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #1e3a8a;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.postjob-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 22px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #111827;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    color: #111827;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #bfdbfe;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13);
+}
+
+textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.submit-btn {
+    margin-top: 12px;
+    padding: 15px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(37, 99, 235, 0.36);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .postjob-page {
+        padding: 55px 18px;
+        align-items: flex-start;
+    }
+
+    .postjob-container {
+        width: calc(100% - 280px);
+        max-width: 680px;
+        margin-left: 260px;
+        padding: 34px;
+        border-radius: 22px;
+    }
+
+    .postjob-container h2 {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+
+    .postjob-form {
+        gap: 20px;
+    }
+
+    .form-row {
+        gap: 18px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .postjob-page {
+        padding: 28px 14px 40px;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+
+    .postjob-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 26px 18px;
+        border-radius: 18px;
+    }
+
+    .postjob-container h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+        line-height: 1.25;
+    }
+
+    .postjob-form {
+        gap: 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 13px 14px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    textarea {
+        min-height: 110px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 14px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .postjob-page {
+        padding: 22px 10px 34px;
+    }
+
+    .postjob-container {
+        padding: 22px 14px;
+        border-radius: 16px;
+    }
+
+    .postjob-container h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .postjob-form {
+        gap: 16px;
+    }
+
+    .form-row {
+        gap: 16px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px;
+        font-size: 12px;
+        border-radius: 11px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        padding: 13px;
+        font-size: 14px;
+    }
+}

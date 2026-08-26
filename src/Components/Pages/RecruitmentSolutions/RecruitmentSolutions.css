@@ -1,0 +1,616 @@
+.recruitment-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #eef8f8;
+    color: #073cad;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+.recruitment-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    padding: 80px 8%;
+     background:
+        radial-gradient(circle at top left, rgba(232, 232, 235, 0.18), transparent 05%),
+        linear-gradient(135deg, #b3cef1, #4f80e9);
+}
+
+.recruitment-badge,
+.section-heading span,
+.contact-info-box span {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #000e20;
+    color: #f7f8fa;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.recruitment-hero-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #0d2b70;
+}
+
+.recruitment-hero-content p {
+    font-size: 18px;
+    color: #f0f0f3;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.recruitment-hero-actions {
+    display: flex;
+    gap: 16px;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #012599, #012599);
+    color: #ffffff;
+}
+
+.secondary-btn {
+    background: #ffffff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.recruitment-stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.recruitment-stats div {
+    background: #ffffff;
+    padding: 18px 24px;
+    border-radius: 18px;
+    min-width: 140px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.recruitment-stats h3 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 4px;
+}
+
+.recruitment-stats p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.recruitment-hero-card {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.18);
+    border: 1px solid #e5e7eb;
+}
+
+.recruitment-hero-card h2 {
+    margin-bottom: 22px;
+    color: #111827;
+}
+
+.dashboard-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f8fafc;
+    margin-bottom: 14px;
+}
+
+.dashboard-row span {
+    color: #64748b;
+}
+
+.dashboard-row b {
+    color: #2563eb;
+    font-size: 20px;
+}
+
+.progress-box {
+    margin-top: 24px;
+}
+
+.progress-box p {
+    margin-bottom: 10px;
+    color: #475569;
+    font-weight: 700;
+}
+
+.progress-line {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-line span {
+    display: block;
+    width: 72%;
+    height: 100%;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    border-radius: 20px;
+}
+
+.recruitment-section,
+.process-section,
+.packages-section,
+.faq-section,
+.contact-section {
+    padding: 70px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.section-heading p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.solution-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.solution-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.solution-tabs button {
+    border: none;
+    background: #ffffff;
+    color: #334155;
+    padding: 18px 20px;
+    border-radius: 16px;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.solution-tabs button.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+}
+
+.solution-content {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.solution-content h3 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.solution-content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.solution-content ul,
+.package-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.solution-content li,
+.package-card li {
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+.process-section {
+    background: #ffffff;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.process-card {
+    background: #f8fafc;
+    padding: 28px;
+    border-radius: 22px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+}
+
+.process-card b {
+    color: #2563eb;
+    font-size: 26px;
+}
+
+.process-card h3 {
+    margin: 18px 0 10px;
+}
+
+.process-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.package-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 34px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.package-card.popular {
+    border: 2px solid #2563eb;
+    transform: scale(1.03);
+}
+
+.popular-tag {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #16a34a;
+    color: #ffffff;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.package-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.package-card h2 {
+    font-size: 38px;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.package-card p {
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.package-card button,
+.recruitment-form button {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.package-card button:hover,
+.recruitment-form button:hover {
+    transform: translateY(-3px);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.faq-item button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-item p {
+    padding: 0 20px 20px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 36px;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.contact-info-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 26px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.contact-info-box h2 {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.contact-info-box p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.recruitment-form {
+    background: #ffffff;
+    padding: 34px;
+    border-radius: 26px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    display: grid;
+    gap: 16px;
+}
+
+.recruitment-form input,
+.recruitment-form textarea {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 15px;
+    outline: none;
+}
+
+.recruitment-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.recruitment-form input:focus,
+.recruitment-form textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+}
+.solution-filter-box {
+    max-width: 900px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 16px;
+}
+
+.solution-filter-box input,
+.solution-filter-box select {
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    outline: none;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+.small-action-btn {
+    margin-top: 18px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.no-data {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #64748b;
+    font-size: 18px;
+}
+
+.selected-plan {
+    border: 2px solid #16a34a !important;
+    box-shadow: 0 20px 45px rgba(22, 163, 74, 0.18);
+}
+
+.selected-box {
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 14px;
+    background: #ecfdf5;
+    color: #166534;
+}
+
+.recruitment-form select {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 15px;
+    outline: none;
+}
+
+.recruitment-form small {
+    margin-top: -10px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.enquiry-section {
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.clear-btn {
+    display: block;
+    margin: 0 auto 25px;
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enquiry-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.enquiry-card {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.enquiry-card h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.enquiry-card p {
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+
+    .solution-filter-box,
+    .enquiry-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .recruitment-hero,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid,
+    .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .solution-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .recruitment-hero {
+        padding: 55px 5%;
+    }
+
+    .recruitment-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .section-heading h2,
+    .contact-info-box h2 {
+        font-size: 28px;
+    }
+
+    .process-grid,
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card.popular {
+        transform: none;
+    }
+
+    .recruitment-section,
+    .process-section,
+    .packages-section,
+    .faq-section,
+    .contact-section {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruitment-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .recruitment-hero-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .recruitment-stats {
+        flex-direction: column;
+    }
+}

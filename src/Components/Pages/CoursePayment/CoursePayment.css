@@ -1,0 +1,255 @@
+.course-payment-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef5ff, #f9fafb);
+    padding: 120px 6% 70px;
+}
+
+.course-payment-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+}
+
+.payment-left-card,
+.payment-right-card,
+.payment-loading-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.payment-left-card {
+    padding: 34px;
+}
+
+.payment-right-card {
+    padding: 30px;
+}
+
+.payment-loading-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.payment-badge {
+    display: inline-flex;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.payment-left-card h1 {
+    margin: 0 0 14px;
+    color: #111827;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.payment-left-card p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.payment-course-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.payment-course-info div,
+.payment-status-box,
+.payment-summary {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.payment-course-info span,
+.payment-summary span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.payment-course-info strong,
+.payment-summary strong {
+    color: #111827;
+    font-size: 16px;
+}
+
+.payment-status-box {
+    margin-top: 22px;
+}
+
+.payment-status-box h3 {
+    margin: 0 0 10px;
+    color: #1e40af;
+}
+
+.payment-status-box p {
+    margin: 6px 0;
+    color: #374151;
+}
+
+.payment-right-card h2 {
+    margin: 0 0 20px;
+    color: #111827;
+    font-size: 26px;
+}
+
+.installment-options {
+    display: grid;
+    gap: 14px;
+}
+
+.installment-options label {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 16px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.installment-options label:hover,
+.installment-options label.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+}
+
+.installment-options input {
+    width: 18px;
+    height: 18px;
+}
+
+.installment-options span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.installment-options strong {
+    color: #111827;
+    font-size: 17px;
+}
+
+.payment-methods {
+    margin-top: 24px;
+}
+
+.payment-methods h3 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.payment-methods select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+.payment-methods select:focus {
+    border-color: #2563eb;
+}
+
+.payment-summary {
+    margin-top: 22px;
+    display: grid;
+    gap: 14px;
+}
+
+.pay-now-btn,
+.back-course-btn,
+.payment-loading-card button {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    padding: 15px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.pay-now-btn {
+    margin-top: 22px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+.pay-now-btn:hover {
+    transform: translateY(-2px);
+}
+
+.pay-now-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.back-course-btn {
+    margin-top: 12px;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.back-course-btn:hover,
+.payment-loading-card button:hover {
+    background: #e5e7eb;
+}
+
+.payment-loading-card button {
+    margin-top: 16px;
+    background: #2563eb;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .course-payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .course-payment-page {
+        padding: 100px 4% 50px;
+    }
+}
+
+@media (max-width: 560px) {
+    .payment-left-card,
+    .payment-right-card {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .payment-left-card h1 {
+        font-size: 26px;
+    }
+
+    .payment-course-info {
+        grid-template-columns: 1fr;
+    }
+}
